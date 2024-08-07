@@ -30,6 +30,13 @@ def fetch_and_store_users(db: Session, num_users: int):
 def get_random_user(db: Session):
     return db.query(models.User).order_by(func.random()).first()
 
+def get_random_username(db: Session):
+    random_user = db.query(models.User).order_by(func.random()).first()
+    if random_user:
+        return random_user.first_name + " " + random_user.last_name
+    return None
+
+
 def get_nearest_users(db: Session, uid: str, x: int):
     user = db.query(models.User).filter(models.User.uid == uid).first()
     if not user:

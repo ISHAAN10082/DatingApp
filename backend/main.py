@@ -1,5 +1,5 @@
 from typing import Union
-from fastapi import FastAPI,Depends
+from fastapi import FastAPI,Depends, HTTPException
 from . import crud, models, schemas
 from .database import engine, SessionLocal
 from requests import  Session
@@ -10,7 +10,7 @@ app = FastAPI()
 
 
 def get_db():
-    db = SessionLocal(Session)
+    db = SessionLocal()
     try:
         yield db
     finally:
@@ -27,3 +27,10 @@ async def get_random_user(db: Session = Depends(get_db)):
 @app.get("/nearest_users/", response_model=list[schemas.User])
 async def get_nearest_users(uid: str, x: int, db: Session = Depends(get_db)):
     return crud.get_nearest_users(db, uid, x)
+
+@app.get("/random_username/", response_model=str)
+async def get_random_username(db: Session = Depends(get_db)):
+    username = crud.get_random_username(db)
+    if username:
+        return username
+    raise HTTPException(status_code=404, detail="No users found in the database")
