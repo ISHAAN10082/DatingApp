@@ -15,5 +15,6 @@ class User(Base):
     gender = Column(String)
     latitude = Column(Float)
     longitude = Column(Float)
-    run_id = Column(Integer)
+    run_id = Column(String, index=True)  
+    run_iteration = Column(Integer)  
     datetime = Column(DateTime, default=datetime.utcnow)

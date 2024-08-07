@@ -2,13 +2,16 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql.expression import func
 from . import models
 import requests
-import random
+import uuid
 from geopy.distance import geodesic
+from datetime import datetime
 
 
 def fetch_and_store_users(db: Session, num_users: int):
-    run_id = random.randint(1, 1000000)
-    for _ in range(num_users):
+    run_id = str(uuid.uuid4())  
+    run_datetime = datetime.utcnow()
+    users_to_add = []
+    for i in range(num_users):
         response = requests.get("https://randomuser.me/api/")
         data = response.json()["results"][0]
         
@@ -20,12 +23,15 @@ def fetch_and_store_users(db: Session, num_users: int):
             gender=data["gender"],
             latitude=float(data["location"]["coordinates"]["latitude"]),
             longitude=float(data["location"]["coordinates"]["longitude"]),
-            run_id=run_id
+            run_id=run_id,
+            run_iteration=i + 1,  
+            datetime=run_datetime
         )
-        db.add(user)
+        users_to_add.append(user)
     
+    db.add_all(users_to_add)
     db.commit()
-    return {"message": f"Added {num_users} users"}
+    return {"message": f"Added {num_users} users", "run_id": run_id}
 
 def get_random_user(db: Session):
     return db.query(models.User).order_by(func.random()).first()

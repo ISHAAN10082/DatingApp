@@ -13,6 +13,7 @@ class UserBase(BaseModel):
 class User(UserBase):
     id: int
     run_id: int
+    run_iteration: int
     datetime: datetime
 
     class Config:
