@@ -1,8 +1,8 @@
 from typing import Union
 from fastapi import FastAPI,Depends
-from . import crud, models, schemas,database
+from . import crud, models, schemas
 from .database import engine, SessionLocal
-
+from requests import  Session
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -10,7 +10,7 @@ app = FastAPI()
 
 
 def get_db():
-    db = SessionLocal()
+    db = SessionLocal(Session)
     try:
         yield db
     finally:
