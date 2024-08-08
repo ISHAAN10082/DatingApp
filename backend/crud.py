@@ -53,18 +53,18 @@ def get_random_user(db: Session):
         response.raise_for_status()  
         data = response.json()["results"][0]
     
-        user = {
-            "uid": data["login"]["uuid"],
-            "email": data["email"],
-            "first_name": data["name"]["first"],
-            "last_name": data["name"]["last"],
-            "gender": data["gender"],
-            "latitude": float(data["location"]["coordinates"]["latitude"]),
-            "longitude": float(data["location"]["coordinates"]["longitude"]),
-            "run_id": run_id,  
-            "run_iteration": 1,
-            "datetime": datetime.utcnow()
-        }
+        user = User(
+            uid=data["login"]["uuid"],
+            email=data["email"],
+            first_name=data["name"]["first"],
+            last_name=data["name"]["last"],
+            gender=data["gender"],
+            latitude=float(data["location"]["coordinates"]["latitude"]),
+            longitude=float(data["location"]["coordinates"]["longitude"]),
+            run_id=run_id,  
+            run_iteration=1,
+            datetime=datetime.utcnow()
+        )
         return user
     except requests.RequestException as e:
         print(f"An error occurred while fetching user data: {e}")
