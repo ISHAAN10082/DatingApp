@@ -1,9 +1,10 @@
 from typing import Union
 from fastapi import FastAPI,Depends, HTTPException
-from . import crud, models, schemas
-from .database import engine, SessionLocal
+import crud, models, schemas
+from database import engine, SessionLocal
 from requests import  Session
 
+models.Base.metadata.drop_all(bind=engine)
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
@@ -35,7 +36,7 @@ async def get_random_user(db: Session = Depends(get_db)):
 async def get_nearest_users(uid: str, x: int, db: Session = Depends(get_db)):
     users = crud.get_nearest_users(db, uid, x)
     if not users:
-        raise HTTPException(status_code=404, detail="User not found or no nearby users")
+        raise HTTPException(status_code=404, detail="User not found / no nearby users")
     return users
 
 

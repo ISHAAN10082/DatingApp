@@ -11,7 +11,7 @@ class UserBase(BaseModel):
     longitude: float
 
 class User(UserBase):
-    id: int
+    #id: int
     run_id: int
     run_iteration: int
     datetime: datetime
@@ -21,3 +21,4 @@ class User(UserBase):
 
 class Message(BaseModel):
     message: str
+    run_id: str

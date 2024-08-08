@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.sql.expression import func
-from . import models
+import models
 import requests
 import uuid
 from geopy.distance import geodesic
@@ -12,8 +12,13 @@ def fetch_and_store_users(db: Session, num_users: int):
     run_datetime = datetime.utcnow()
     users_to_add = []
     for i in range(num_users):
-        response = requests.get("https://randomuser.me/api/")
-        data = response.json()["results"][0]
+        try:
+            response = requests.get("https://randomuser.me/api/")
+            response.raise_for_status()  # Ensure the request was successful
+            data = response.json()["results"][0]
+        except requests.RequestException as e:
+            print(f"An error occurred while fetching user data: {e}")
+            continue  # Skip this iteration if there is an error
         
         user = models.User(
             uid=data["login"]["uuid"],
