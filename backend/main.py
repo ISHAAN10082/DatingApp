@@ -4,7 +4,7 @@ import crud, models, schemas
 from database import engine, SessionLocal
 from requests import  Session
 
-models.Base.metadata.drop_all(bind=engine)
+#models.Base.metadata.drop_all(bind=engine)
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
