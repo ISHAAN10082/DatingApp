@@ -1,93 +1,98 @@
 import streamlit as st
-import httpx
+import requests
+import pandas as pd
 import folium
-import asyncio
 from streamlit_folium import folium_static
 
-BASE_URL = "http://127.0.0.1:8000"
+# Set the backend URL
+BACKEND_URL = "http://localhost:8000"  # Adjust this if your backend is hosted elsewhere
 
-async def fetch_users(num_users: int):
-    async with httpx.AsyncClient() as client:
-        response = await client.post(f"{BASE_URL}/fetch_users/", json={"num_users": num_users})
+st.set_page_config(page_title="Dating App Dashboard", page_icon=":heart:", layout="wide")
+
+st.title("Dating App")
+
+def make_request(method, endpoint, **kwargs):
+    try:
+        response = requests.request(method, f"{BACKEND_URL}{endpoint}", **kwargs)
         response.raise_for_status()
         return response.json()
+    except requests.RequestException as e:
+        st.error(f"An error occurred: {str(e)}")
+        return None
 
-async def get_random_user():
-    async with httpx.AsyncClient() as client:
-        response = await client.get(f"{BASE_URL}/random_user/")
-        response.raise_for_status()
-        return response.json()
+# Create two columns for the main layout
+col1, col2 = st.columns(2)
 
-async def get_nearest_users(uid: str, x: int):
-    async with httpx.AsyncClient() as client:
-        response = await client.get(f"{BASE_URL}/nearest_users/", params={"uid": uid, "x": x})
-        response.raise_for_status()
-        return response.json()
+with col1:
+    st.header("Fetch and Store Users")
+    num_users = st.number_input("Number of users to fetch", min_value=1, max_value=100, value=10)
+    if st.button("Fetch Users"):
+        result = make_request("POST", f"/fetch_users/?num_users={int(num_users)}")
+        if result:
+            st.success(result["message"])
+            st.info(f"Run ID: {result['run_id']}")
 
-async def get_random_username():
-    async with httpx.AsyncClient() as client:
-        response = await client.get(f"{BASE_URL}/random_username/")
-        response.raise_for_status()
-        return response.json()
+    st.header("Get Random User")
+    if st.button("Get Random User"):
+        user = make_request("GET", "/random_user/")
+        if user:
+            st.write(f"Name: {user['first_name']} {user['last_name']}")
+            st.write(f"Email: {user['email']}")
+            st.write(f"Gender: {user['gender']}")
+            st.write(f"UID: {user['uid']}")
+            st.write(f"Ingestion Date: {user['datetime']}")
+            m = folium.Map(location=[user['latitude'], user['longitude']], zoom_start=10)
+            folium.Marker(
+                [user['latitude'], user['longitude']],
+                popup=f"{user['first_name']} {user['last_name']}",
+                tooltip=user['email']
+            ).add_to(m)
+            folium_static(m)
 
-# Helper function to run async functions
-def run_async_func(func, *args):
-    return asyncio.run(func(*args))
+    st.header("Get Random Username")
+    if st.button("Generate Random Username"):
+        username = make_request("GET", "/random_username/")
+        if username:
+            st.success(f"Random Username: {username}")
 
-# Streamlit app layout
-st.title("Dating App User Finder")
-
-# Section to fetch and store users
-st.header("Fetch and Store Users")
-num_users = st.number_input("Number of users to fetch", min_value=1, max_value=1000, value=10)
-if st.button("Fetch and Store Users"):
-    with st.spinner(f"Fetching and storing {num_users} users..."):
-        result = run_async_func(fetch_users, num_users)
-        st.success(f"Fetched and stored {num_users} users: {result['message']}")
-
-# Section to fetch and display a random user
-st.header("Get Random User")
-if st.button("Get Random User"):
-    with st.spinner("Fetching random user..."):
-        user = run_async_func(get_random_user)
-        st.write(f"Name: {user['first_name']} {user['last_name']}")
-        st.write(f"Email: {user['email']}")
-        st.write(f"Gender: {user['gender']}")
-        st.write(f"Location: ({user['latitude']}, {user['longitude']})")
-
-# Section to get and display nearest users
-st.header("Get Nearest Users")
-uid = st.text_input("Enter User ID", value="")
-num_nearest_users = st.number_input("Number of nearest users", min_value=1, max_value=100, value=10)
-if st.button("Get Nearest Users"):
-    if not uid:
-        st.error("Please enter a user ID.")
-    else:
-        with st.spinner(f"Fetching {num_nearest_users} nearest users..."):
-            nearest_users = run_async_func(get_nearest_users, uid, num_nearest_users)
-            if nearest_users:
-                st.success(f"Fetched {num_nearest_users} nearest users.")
-
-                # Create a map centered around the first user's location if available
-                user_location = (nearest_users[0]['latitude'], nearest_users[0]['longitude'])
-                m = folium.Map(location=user_location, zoom_start=10)
-
-                # Add the nearest users' locations to the map
-                for user in nearest_users:
+with col2:
+    st.header("Find Nearest Users")
+    email = st.text_input("Enter user email")
+    x = st.number_input("Number of nearest users to find", min_value=1, max_value=10, value=5)
+    if st.button("Find Nearest Users"):
+        if not email or '@' not in email:
+            st.error("Please enter a valid email address")
+        else:
+            users = make_request("GET", "/nearest_users/", params={"email": email, "x": x})
+            if users:
+                # Create a Folium map centered on the first user
+                m = folium.Map(location=[users[0]['latitude'], users[0]['longitude']], zoom_start=10)
+                
+                for user in users:
+                    st.write(f"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}")
                     folium.Marker(
-                        location=(user['latitude'], user['longitude']),
+                        [user['latitude'], user['longitude']],
                         popup=f"{user['first_name']} {user['last_name']}",
-                        icon=folium.Icon(color="blue")
+                        tooltip=user['email']
                     ).add_to(m)
-
+                
                 # Display the map
                 folium_static(m)
-            else:
-                st.error("No nearest users found.")
 
-# Section to fetch a random username
-st.header("Get Random Username")
-if st.button("Get Random Username"):
-    with st.spinner("Fetching random username..."):
-        username = run_async_func(get_random_username)
-        st.write(f"Random Username: {username}")
+st.sidebar.info("This application interacts with a FastAPI backend to manage random user data.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    

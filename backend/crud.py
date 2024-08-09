@@ -2,7 +2,6 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql.expression import func
 import models
 import requests
-import random
 import uuid
 from geopy.distance import geodesic
 from datetime import datetime
@@ -46,32 +45,6 @@ def fetch_and_store_users(db: Session, num_users: int):
 def get_random_user(db: Session):
     return db.query(models.User).order_by(func.random()).first()
 
-# def get_random_user(db: Session):
-#     run_id = str(uuid.uuid4())
-#     try:
-#         response = requests.get("https://randomuser.me/api/")
-#         response.raise_for_status()  
-#         data = response.json()["results"][0]
-    
-#         user = User(
-#             uid=data["login"]["uuid"],
-#             email=data["email"],
-#             first_name=data["name"]["first"],
-#             last_name=data["name"]["last"],
-#             gender=data["gender"],
-#             latitude=float(data["location"]["coordinates"]["latitude"]),
-#             longitude=float(data["location"]["coordinates"]["longitude"]),
-#             run_id=run_id,  
-#             run_iteration=1,
-#             datetime=datetime.utcnow()
-#         )
-#         return user
-#     except requests.RequestException as e:
-#         print(f"An error occurred while fetching user data: {e}")
-#         return None
-
-
-
 
 def get_random_username(db: Session):
     random_user = get_random_user(db)
@@ -80,15 +53,15 @@ def get_random_username(db: Session):
     return None
 
 
-def get_nearest_users(db: Session, uid: str, x: int):
-    user = db.query(models.User).filter(models.User.uid == uid).first()
+def get_nearest_users(db: Session, email: str, x: int):
+    user = db.query(models.User).filter(models.User.email== email).first()
     if not user:
         return []
     
     all_users = db.query(models.User).all()
     distances = []
     for other_user in all_users:
-        if other_user.uid != user.uid:
+        if other_user.email != user.email:
             distance = geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles
             distances.append((other_user, distance))
     

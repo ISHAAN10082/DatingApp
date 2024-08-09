@@ -33,8 +33,8 @@ async def get_random_user(db: Session = Depends(get_db)):
 
 
 @app.get("/nearest_users/", response_model=list[schemas.User])
-async def get_nearest_users(uid: str, x: int, db: Session = Depends(get_db)):
-    users = crud.get_nearest_users(db, uid, x)
+async def get_nearest_users(email: str, x: int, db: Session = Depends(get_db)):
+    users = crud.get_nearest_users(db, email, x)
     if not users:
         raise HTTPException(status_code=404, detail="User not found / no nearby users")
     return users
