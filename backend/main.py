@@ -56,8 +56,16 @@ async def fetch_users(num_users: int, db: Session = Depends(get_db)):
 async def get_random_user(db: Session = Depends(get_db)):
     user = crud.get_random_user(db)
     if not user:
-        raise HTTPException(status_code=404, detail="No users found")
-    return user
+        raise HTTPException(status_code=404, detail="No users found in the database")
+    
+    # Add a log message
+    print(f"Random user retrieved: {user.first_name} {user.last_name}")
+    
+    # Convert the user object to a dictionary and add a custom field
+    user_dict = schemas.User.from_orm(user).dict()
+    user_dict["full_name"] = f"{user.first_name} {user.last_name}"
+    
+    return user_dict
 
 
 @app.get("/nearest_users/", response_model=list[schemas.User])
