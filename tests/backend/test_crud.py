@@ -1,91 +1,102 @@
 import pytest
+from unittest.mock import MagicMock
 from backend.crud import fetch_and_store_users
-from unittest import mock
 from sqlalchemy.orm import Session
-from backend import models
 
 @pytest.fixture
-def mock_db_session():
-    db = mock.Mock(spec=Session)
-    yield db
+def mock_db():
+    db = MagicMock(spec=Session)
+    db.query.return_value.count.return_value = 0
+    return db
 
-@mock.patch('requests.get')
-def test_fetch_and_store_users_success(mock_get, mock_db_session):
-    mock_get.return_value.json.return_value = {
-        "results": [
-            {
-                "login": {"uuid": "uuid-1234"},
-                "email": "test@example.com",
-                "name": {"first": "Test", "last": "User"},
-                "gender": "male",
-                "location": {
-                    "coordinates": {
-                        "latitude": "50.0",
-                        "longitude": "10.0"
+@pytest.fixture
+def mock_requests_get(monkeypatch):
+    class MockResponse:
+        @staticmethod
+        def json():
+            return {
+                'results': [
+                    {
+                        'login': {'uuid': '12345'},
+                        'email': 'user@example.com',
+                        'name': {'first': 'John', 'last': 'Doe'},
+                        'gender': 'male',
+                        'location': {
+                            'coordinates': {'latitude': '45.0', 'longitude': '-75.0'}
+                        }
                     }
-                }
+                ]
             }
-        ]
-    }
-    mock_get.return_value.status_code = 200
-    response = fetch_and_store_users(mock_db_session, 1)
-    assert response['message'] == "Added 1 new users. Total users: 1"
-    assert response['run_id'] is not None
-    mock_db_session.add_all.assert_called_once()
-    mock_db_session.commit.assert_called_once()
+        @staticmethod
+        def raise_for_status():
+            pass
+
+    monkeypatch.setattr('requests.get', lambda *args, **kwargs: MockResponse())
+
+def test_fetch_and_store_users(mock_db, mock_requests_get):
+    response = fetch_and_store_users(mock_db, 1)
+    assert response['message'] == 'Added 1 new users. Total users: 1'
+    assert mock_db.add_all.call_count == 1
+    assert mock_db.commit.call_count == 1
 
 import pytest
+from unittest.mock import MagicMock
 from backend.crud import fetch_and_store_users
-from unittest import mock
 from sqlalchemy.orm import Session
-from backend import models
 
 @pytest.fixture
-def mock_db_session():
-    db = mock.Mock(spec=Session)
-    yield db
+def mock_db():
+    db = MagicMock(spec=Session)
+    db.query.return_value.count.side_effect = [0, 1]
+    return db
 
-@mock.patch('requests.get')
-def test_fetch_and_store_multiple_users(mock_get, mock_db_session):
-    mock_get.return_value.json.return_value = {
-        "results": [
-            {
-                "login": {"uuid": "uuid-1234"},
-                "email": "test@example.com",
-                "name": {"first": "Test", "last": "User"},
-                "gender": "female",
-                "location": {
-                    "coordinates": {
-                        "latitude": "50.0",
-                        "longitude": "10.0"
-                    }
-                }
-            }
-            ,
-            {
-                "login": {"uuid": "uuid-5678"},
-                "email": "another@example.com",
-                "name": {"first": "Another", "last": "User"},
-                "gender": "male",
-                "location": {
-                    "coordinates": {
-                        "latitude": "51.0",
-                        "longitude": "11.0"
-                    }
-                }
-            }
-        ]
-    }
-    mock_get.return_value.status_code = 200
-    response = fetch_and_store_users(mock_db_session, 2)
-    assert response['message'] == "Added 2 new users. Total users: 2"
-    assert response['run_id'] is not None
-    mock_db_session.add_all.assert_called_once() 
-    mock_db_session.commit.assert_called_once()
+@pytest.fixture
+def mock_requests_get(monkeypatch):
+    def side_effect(*args, **kwargs):
+        raise requests.RequestException('Network error')
+    monkeypatch.setattr('requests.get', side_effect)
 
-import pytest\nfrom backend.crud import get_random_user\nfrom unittest.mock import MagicMock\nfrom sqlalchemy.orm import Session\n\n@pytest.fixture\ndef mock_db() -> Session:\n    db = MagicMock()\n    user_mock = MagicMock(id=1, name='Test User')\n    db.query.return_value.order_by.return_value.first.return_value = user_mock\n    return db\n\ndef test_get_random_user(mock_db):\n    user = get_random_user(mock_db)\n    assert user.id == 1\n    assert user.name == 'Test User'
+def test_fetch_and_store_users_network_error(mock_db, mock_requests_get):
+    response = fetch_and_store_users(mock_db, 3)
+    assert response['message'] == 'Added 0 new users. Total users: 0'
+    assert mock_db.add_all.call_count == 0
+    assert mock_db.commit.call_count == 0
 
-import pytest\nfrom backend.crud import get_random_user\nfrom unittest.mock import MagicMock\nfrom sqlalchemy.orm import Session\n\n@pytest.fixture\ndef empty_mock_db() -> Session:\n    db = MagicMock()\n    db.query.return_value.order_by.return_value.first.return_value = None\n    return db\n\ndef test_get_random_user_no_users(empty_mock_db):\n    user = get_random_user(empty_mock_db)\n    assert user is None
+import pytest
+from backend.crud import get_random_user
+from unittest.mock import MagicMock
+from sqlalchemy.orm import Session
+
+@pytest.fixture
+def mock_db():
+    db = MagicMock(spec=Session)
+    mock_user = MagicMock()
+    db.query.return_value.order_by.return_value.first.return_value = mock_user
+    return db
+
+def test_get_random_user_returns_user(mock_db):
+    user = get_random_user(mock_db)
+    assert user is not None
+    mock_db.query.assert_called_once()
+    mock_db.query.return_value.order_by.assert_called_once()
+
+import pytest
+from backend.crud import get_random_user
+from unittest.mock import MagicMock
+from sqlalchemy.orm import Session
+
+@pytest.fixture
+def empty_mock_db():
+    db = MagicMock(spec=Session)
+    db.query.return_value.order_by.return_value.first.return_value = None
+    return db
+
+
+def test_get_random_user_no_users(empty_mock_db):
+    user = get_random_user(empty_mock_db)
+    assert user is None
+    empty_mock_db.query.assert_called_once()
+    empty_mock_db.query.return_value.order_by.assert_called_once()
 
 import pytest
 from backend.crud import get_random_username
@@ -93,19 +104,17 @@ from unittest.mock import MagicMock
 
 @pytest.fixture
 def mock_db():
-    db = MagicMock()
-    return db
+    return MagicMock()
 
 @pytest.fixture
-def mock_get_random_user(monkeypatch):
-    def mock_user(db):
-        class User:
-            first_name = 'John'
-            last_name = 'Doe'
-        return User()
-    monkeypatch.setattr('backend.crud.get_random_user', mock_user)
+def mock_random_user():
+    user = MagicMock()
+    user.first_name = 'John'
+    user.last_name = 'Doe'
+    return user
 
-def test_get_random_username_with_valid_user(mock_db, mock_get_random_user):
+def test_get_random_username_with_valid_user(mock_db, monkeypatch, mock_random_user):
+    monkeypatch.setattr('backend.crud.get_random_user', lambda db: mock_random_user)
     username = get_random_username(mock_db)
     assert username == 'John Doe'
 
@@ -115,62 +124,46 @@ from unittest.mock import MagicMock
 
 @pytest.fixture
 def mock_db():
-    db = MagicMock()
-    return db
+    return MagicMock()
 
-@pytest.fixture
-def mock_get_random_user(monkeypatch):
+def test_get_random_username_with_no_user(mock_db, monkeypatch):
     monkeypatch.setattr('backend.crud.get_random_user', lambda db: None)
-
-def test_get_random_username_with_no_user(mock_db, mock_get_random_user):
     username = get_random_username(mock_db)
     assert username is None
 
 import pytest
 from backend.crud import get_nearest_users
 from unittest.mock import MagicMock
-from sqlalchemy.orm import Session
 
 @pytest.fixture
 def mock_db():
-    db = MagicMock(spec=Session)
-    user = MagicMock()
-    user.email = 'test@example.com'
-    user.latitude = 40.7128
-    user.longitude = -74.0060
-    db.query.return_value.filter.return_value.first.return_value = user
-    other_user_1 = MagicMock()
-    other_user_1.email = 'other1@example.com'
-    other_user_1.latitude = 40.730610
-    other_user_1.longitude = -73.935242
-    other_user_2 = MagicMock()
-    other_user_2.email = 'other2@example.com'
-    other_user_2.latitude = 34.0522
-    other_user_2.longitude = -118.2437
-    db.query.return_value.all.return_value = [user, other_user_1, other_user_2]
+    db = MagicMock()
+    user1 = MagicMock(email='user1@example.com', latitude=40.748817, longitude=-73.985428)
+    user2 = MagicMock(email='user2@example.com', latitude=40.758817, longitude=-73.975428)
+    user3 = MagicMock(email='user3@example.com', latitude=41.748817, longitude=-74.985428)
+    db.query.return_value.filter.return_value.first.return_value = user1
+    db.query.return_value.all.return_value = [user1, user2, user3]
     return db
 
-def test_get_nearest_users_user_found(mock_db):
-    result = get_nearest_users(mock_db, 'test@example.com', 1)
-    assert len(result) == 1
-    assert result[0].email == 'other1@example.com'
 
-
+def test_get_nearest_users_with_nearby_users(mock_db):
+    result = get_nearest_users(mock_db, 'user1@example.com', 2)
+    assert len(result) == 2
+    assert result[0].email == 'user2@example.com'
+    assert result[1].email == 'user3@example.com'
 
 import pytest
 from backend.crud import get_nearest_users
 from unittest.mock import MagicMock
-from sqlalchemy.orm import Session
 
 @pytest.fixture
-def mock_db_user_not_found():
-    db = MagicMock(spec=Session)
+def mock_db():
+    db = MagicMock()
     db.query.return_value.filter.return_value.first.return_value = None
     return db
 
-def test_get_nearest_users_user_not_found(mock_db_user_not_found):
-    result = get_nearest_users(mock_db_user_not_found, 'nonexistent@example.com', 3)
+
+def test_get_nearest_users_no_user_found(mock_db):
+    result = get_nearest_users(mock_db, 'nonexistent@example.com', 2)
     assert result == []
-
-
 

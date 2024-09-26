@@ -1,4 +1,123 @@
 {
+    "/home/hansal/DatingApp/conftest.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "sys",
+                            "alias": "sys"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "pathlib",
+                    "names": [
+                        {
+                            "module": "Path",
+                            "alias": "Path"
+                        }
+                    ]
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "project_root"
+                    ],
+                    "value": "Path(__file__).parent.absolute()"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "call",
+                    "function": "Path(__file__).parent.absolute",
+                    "args": []
+                },
+                {
+                    "type": "call",
+                    "function": "Path",
+                    "args": [
+                        "__file__"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Path"
+                },
+                {
+                    "type": "name",
+                    "id": "__file__"
+                },
+                {
+                    "type": "call",
+                    "function": "str",
+                    "args": [
+                        "project_root"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "call",
+                    "function": "sys.path.insert",
+                    "args": [
+                        "0",
+                        "str(project_root)"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "call",
+                    "function": "str",
+                    "args": [
+                        "project_root"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "call",
+                    "function": "print",
+                    "args": [
+                        "'Python path:'",
+                        "sys.path"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "print"
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                }
+            ]
+        }
+    ],
     "/home/hansal/DatingApp/frontend/__init__.py": [
         {
             "type": "module",
@@ -6,6 +125,12 @@
         }
     ],
     "/home/hansal/DatingApp/backend/__init__.py": [
+        {
+            "type": "module",
+            "children": []
+        }
+    ],
+    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
         {
             "type": "module",
             "children": []
@@ -364,131 +489,6 @@
                         }
                     ],
                     "methods": []
-                }
-            ]
-        }
-    ],
-    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
-    "/home/hansal/DatingApp/conftest.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "sys",
-                            "alias": "sys"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "pathlib",
-                    "names": [
-                        {
-                            "module": "Path",
-                            "alias": "Path"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "project_root"
-                    ],
-                    "value": "Path(__file__).parent.absolute()"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "call",
-                    "function": "Path(__file__).parent.absolute",
-                    "args": []
-                },
-                {
-                    "type": "call",
-                    "function": "Path",
-                    "args": [
-                        "__file__"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "Path"
-                },
-                {
-                    "type": "name",
-                    "id": "__file__"
-                },
-                {
-                    "type": "call",
-                    "function": "str",
-                    "args": [
-                        "project_root"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "call",
-                    "function": "sys.path.insert",
-                    "args": [
-                        "0",
-                        "str(project_root)"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "call",
-                    "function": "str",
-                    "args": [
-                        "project_root"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "call",
-                    "function": "print",
-                    "args": [
-                        "'Python path:'",
-                        "sys.path"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "print"
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
                 }
             ]
         }
@@ -6211,6 +6211,566 @@
                                 {
                                     "type": "name",
                                     "id": "m"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "class",
+                    "name": "UserAnalytics",
+                    "children": [
+                        {
+                            "type": "method",
+                            "name": "get_user_count",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "count"
+                                    ],
+                                    "value": "make_request('GET', '/user_count/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/user_count/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'Total number of users: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "method",
+                            "name": "get_gender_distribution",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "distribution"
+                                    ],
+                                    "value": "make_request('GET', '/gender_distribution/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/gender_distribution/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "'Gender Distribution:'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "distribution.items",
+                                    "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'{gender}: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        }
+                    ],
+                    "methods": [
+                        {
+                            "type": "method",
+                            "name": "get_user_count",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "count"
+                                    ],
+                                    "value": "make_request('GET', '/user_count/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/user_count/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'Total number of users: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "method",
+                            "name": "get_gender_distribution",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "distribution"
+                                    ],
+                                    "value": "make_request('GET', '/gender_distribution/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/gender_distribution/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "'Gender Distribution:'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "distribution.items",
+                                    "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'{gender}: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "class",
+                    "name": "UserAnalytics",
+                    "children": [
+                        {
+                            "type": "method",
+                            "name": "get_user_count",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "count"
+                                    ],
+                                    "value": "make_request('GET', '/user_count/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/user_count/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'Total number of users: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "method",
+                            "name": "get_gender_distribution",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "distribution"
+                                    ],
+                                    "value": "make_request('GET', '/gender_distribution/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/gender_distribution/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "'Gender Distribution:'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "distribution.items",
+                                    "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'{gender}: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        }
+                    ],
+                    "methods": [
+                        {
+                            "type": "method",
+                            "name": "get_user_count",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "count"
+                                    ],
+                                    "value": "make_request('GET', '/user_count/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/user_count/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'Total number of users: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "staticmethod"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "method",
+                            "name": "get_gender_distribution",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "distribution"
+                                    ],
+                                    "value": "make_request('GET', '/gender_distribution/')"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "make_request",
+                                    "args": [
+                                        "'GET'",
+                                        "'/gender_distribution/'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "make_request"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "'Gender Distribution:'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "distribution.items",
+                                    "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "distribution"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'{gender}: {count}'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "gender"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
                                 },
                                 {
                                     "type": "name",

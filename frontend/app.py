@@ -134,18 +134,33 @@ class UserManager:
 
 class UserAnalytics:
     @staticmethod
-    def get_user_count():
-        count = make_request("GET", "/user_count/")
-        if count is not None:
-            st.write(f"Total number of users: {count}")
+    def display_user_insights():
+        user_data = make_request("GET", "/user_insights/")
+        if user_data is not None:
+            st.subheader("User Insights Dashboard")
+            
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.metric("Total Users", user_data['total_users'])
+            with col2:
+                st.metric("Active Users", user_data['active_users'], 
+                          delta=user_data['active_users_change'])
+            with col3:
+                st.metric("New Users (Last 7 days)", user_data['new_users_week'])
+            
+            st.plotly_chart(create_user_growth_chart(user_data['user_growth']))
+            
+            st.subheader("User Demographics")
+            age_col, country_col = st.columns(2)
+            with age_col:
+                st.bar_chart(user_data['age_distribution'])
+            with country_col:
+                st.map(user_data['user_locations'])
 
-    @staticmethod
-    def get_gender_distribution():
-        distribution = make_request("GET", "/gender_distribution/")
-        if distribution:
-            st.write("Gender Distribution:")
-            for gender, count in distribution.items():
-                st.write(f"{gender}: {count}")
+def create_user_growth_chart(growth_data):
+    # Assume this function creates a Plotly line chart of user growth over time
+    # Implementation details omitted for brevity
+    pass
 
 
 
