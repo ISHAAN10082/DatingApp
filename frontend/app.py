@@ -132,6 +132,20 @@ class UserManager:
                 folium_static(m)
 
 
+class UserAnalytics:
+    @staticmethod
+    def get_user_count():
+        count = make_request("GET", "/user_count/")
+        if count is not None:
+            st.write(f"Total number of users: {count}")
+
+    @staticmethod
+    def get_gender_distribution():
+        distribution = make_request("GET", "/gender_distribution/")
+        if distribution:
+            st.write("Gender Distribution:")
+            for gender, count in distribution.items():
+                st.write(f"{gender}: {count}")
 
 
 
