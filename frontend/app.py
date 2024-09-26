@@ -138,7 +138,8 @@ class UserAnalytics:
     def get_user_count():
         count = make_request("GET", "/user_count/")
         if count is not None:
-            st.write(f"Total number of users: {count}")
+            st.metric("Total Users", count)
+            st.bar_chart({"Users": count})
 
     @staticmethod
     def get_gender_distribution():

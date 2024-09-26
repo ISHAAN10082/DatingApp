@@ -11,12 +11,6 @@
             "children": []
         }
     ],
-    "/home/hansal/DatingApp/backend/__init__.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
     "/home/hansal/DatingApp/conftest.py": [
         {
             "type": "module",
@@ -134,6 +128,12 @@
                     "id": "sys"
                 }
             ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/__init__.py": [
+        {
+            "type": "module",
+            "children": []
         }
     ],
     "/home/hansal/DatingApp/backend/database.py": [
@@ -1723,8 +1723,77 @@
                     "id": "HTTPException"
                 },
                 {
+                    "type": "call",
+                    "function": "print",
+                    "args": [
+                        "f'Random user retrieved: {user.first_name} {user.last_name}'"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "print"
+                },
+                {
                     "type": "name",
                     "id": "user"
+                },
+                {
+                    "type": "name",
+                    "id": "user"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "user_dict"
+                    ],
+                    "value": "schemas.User.from_orm(user).dict()"
+                },
+                {
+                    "type": "name",
+                    "id": "user_dict"
+                },
+                {
+                    "type": "call",
+                    "function": "schemas.User.from_orm(user).dict",
+                    "args": []
+                },
+                {
+                    "type": "call",
+                    "function": "schemas.User.from_orm",
+                    "args": [
+                        "user"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "schemas"
+                },
+                {
+                    "type": "name",
+                    "id": "user"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "user_dict['full_name']"
+                    ],
+                    "value": "f'{user.first_name} {user.last_name}'"
+                },
+                {
+                    "type": "name",
+                    "id": "user_dict"
+                },
+                {
+                    "type": "name",
+                    "id": "user"
+                },
+                {
+                    "type": "name",
+                    "id": "user"
+                },
+                {
+                    "type": "name",
+                    "id": "user_dict"
                 },
                 {
                     "type": "call",
