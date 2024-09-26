@@ -118,7 +118,7 @@
             ]
         }
     ],
-    "/home/hansal/DatingApp/frontend/__init__.py": [
+    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
         {
             "type": "module",
             "children": []
@@ -128,369 +128,6 @@
         {
             "type": "module",
             "children": []
-        }
-    ],
-    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
-    "/home/hansal/DatingApp/backend/schemas.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "pydantic",
-                    "names": [
-                        {
-                            "module": "BaseModel",
-                            "alias": "BaseModel"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "datetime",
-                    "names": [
-                        {
-                            "module": "datetime",
-                            "alias": "datetime"
-                        }
-                    ]
-                },
-                {
-                    "type": "class",
-                    "name": "UserBase",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "UserBase",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "UserBase"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "UserBase"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "Message",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "message"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "Message",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "message"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        }
-                    ],
-                    "methods": []
-                }
-            ]
         }
     ],
     "/home/hansal/DatingApp/backend/database.py": [
@@ -611,1261 +248,10 @@
             ]
         }
     ],
-    "/home/hansal/DatingApp/backend/models.py": [
+    "/home/hansal/DatingApp/frontend/__init__.py": [
         {
             "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "sqlalchemy",
-                    "names": [
-                        {
-                            "module": "Column",
-                            "alias": "Column"
-                        },
-                        {
-                            "module": "Integer",
-                            "alias": "Integer"
-                        },
-                        {
-                            "module": "String",
-                            "alias": "String"
-                        },
-                        {
-                            "module": "Float",
-                            "alias": "Float"
-                        },
-                        {
-                            "module": "DateTime",
-                            "alias": "DateTime"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "sqlalchemy.ext.declarative",
-                    "names": [
-                        {
-                            "module": "declarative_base",
-                            "alias": "declarative_base"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "datetime",
-                    "names": [
-                        {
-                            "module": "datetime",
-                            "alias": "datetime"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "Base"
-                    ],
-                    "value": "declarative_base()"
-                },
-                {
-                    "type": "name",
-                    "id": "Base"
-                },
-                {
-                    "type": "call",
-                    "function": "declarative_base",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "declarative_base"
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Base"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "__tablename__"
-                            ],
-                            "value": "'users'"
-                        },
-                        {
-                            "type": "name",
-                            "id": "__tablename__"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "uid"
-                            ],
-                            "value": "Column(String, unique=True, primary_key=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "email"
-                            ],
-                            "value": "Column(String, unique=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "first_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "last_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "gender"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "latitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "longitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "Column(String, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_iteration"
-                            ],
-                            "value": "Column(Integer)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Integer"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Integer"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "datetime"
-                            ],
-                            "value": "Column(DateTime, default=datetime.utcnow)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "DateTime"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "DateTime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Base"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "__tablename__"
-                            ],
-                            "value": "'users'"
-                        },
-                        {
-                            "type": "name",
-                            "id": "__tablename__"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "uid"
-                            ],
-                            "value": "Column(String, unique=True, primary_key=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "email"
-                            ],
-                            "value": "Column(String, unique=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "first_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "last_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "gender"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "latitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "longitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "Column(String, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_iteration"
-                            ],
-                            "value": "Column(Integer)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Integer"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Integer"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "datetime"
-                            ],
-                            "value": "Column(DateTime, default=datetime.utcnow)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "DateTime"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "DateTime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        }
-                    ],
-                    "methods": []
-                }
-            ]
-        }
-    ],
-    "/home/hansal/DatingApp/backend/main.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "sys",
-                            "alias": "sys"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "os",
-                            "alias": "os"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "current_dir"
-                    ],
-                    "value": "os.path.dirname(os.path.abspath(__file__))"
-                },
-                {
-                    "type": "name",
-                    "id": "current_dir"
-                },
-                {
-                    "type": "call",
-                    "function": "os.path.dirname",
-                    "args": [
-                        "os.path.abspath(__file__)"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "os"
-                },
-                {
-                    "type": "call",
-                    "function": "os.path.abspath",
-                    "args": [
-                        "__file__"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "os"
-                },
-                {
-                    "type": "name",
-                    "id": "__file__"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "parent_dir"
-                    ],
-                    "value": "os.path.dirname(current_dir)"
-                },
-                {
-                    "type": "name",
-                    "id": "parent_dir"
-                },
-                {
-                    "type": "call",
-                    "function": "os.path.dirname",
-                    "args": [
-                        "current_dir"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "os"
-                },
-                {
-                    "type": "name",
-                    "id": "current_dir"
-                },
-                {
-                    "type": "call",
-                    "function": "sys.path.insert",
-                    "args": [
-                        "0",
-                        "parent_dir"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "name",
-                    "id": "parent_dir"
-                },
-                {
-                    "type": "call",
-                    "function": "sys.path.insert",
-                    "args": [
-                        "0",
-                        "current_dir"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "name",
-                    "id": "current_dir"
-                },
-                {
-                    "type": "import",
-                    "module": "database",
-                    "names": [
-                        {
-                            "module": "SessionLocal",
-                            "alias": "SessionLocal"
-                        },
-                        {
-                            "module": "engine",
-                            "alias": "engine"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "typing",
-                    "names": [
-                        {
-                            "module": "Union",
-                            "alias": "Union"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "fastapi",
-                    "names": [
-                        {
-                            "module": "FastAPI",
-                            "alias": "FastAPI"
-                        },
-                        {
-                            "module": "Depends",
-                            "alias": "Depends"
-                        },
-                        {
-                            "module": "HTTPException",
-                            "alias": "HTTPException"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "backend",
-                    "names": [
-                        {
-                            "module": "crud",
-                            "alias": "crud"
-                        },
-                        {
-                            "module": "models",
-                            "alias": "models"
-                        },
-                        {
-                            "module": "schemas",
-                            "alias": "schemas"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "requests",
-                    "names": [
-                        {
-                            "module": "Session",
-                            "alias": "Session"
-                        }
-                    ]
-                },
-                {
-                    "type": "call",
-                    "function": "models.Base.metadata.create_all",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "models"
-                },
-                {
-                    "type": "name",
-                    "id": "engine"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "app"
-                    ],
-                    "value": "FastAPI()"
-                },
-                {
-                    "type": "name",
-                    "id": "app"
-                },
-                {
-                    "type": "call",
-                    "function": "FastAPI",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "FastAPI"
-                },
-                {
-                    "type": "function",
-                    "name": "get_db",
-                    "children": [
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "db"
-                            ],
-                            "value": "SessionLocal()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "call",
-                            "function": "SessionLocal",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "SessionLocal"
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.close",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_db",
-                    "children": [
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "db"
-                            ],
-                            "value": "SessionLocal()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "call",
-                            "function": "SessionLocal",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "SessionLocal"
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.close",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        }
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "int"
-                },
-                {
-                    "type": "name",
-                    "id": "Session"
-                },
-                {
-                    "type": "call",
-                    "function": "Depends",
-                    "args": [
-                        "get_db"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "Depends"
-                },
-                {
-                    "type": "name",
-                    "id": "get_db"
-                },
-                {
-                    "type": "call",
-                    "function": "crud.fetch_and_store_users",
-                    "args": [
-                        "db",
-                        "num_users"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "crud"
-                },
-                {
-                    "type": "name",
-                    "id": "db"
-                },
-                {
-                    "type": "name",
-                    "id": "num_users"
-                },
-                {
-                    "type": "call",
-                    "function": "app.post",
-                    "args": [
-                        "'/fetch_users/'"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "app"
-                },
-                {
-                    "type": "name",
-                    "id": "schemas"
-                },
-                {
-                    "type": "name",
-                    "id": "Session"
-                },
-                {
-                    "type": "call",
-                    "function": "Depends",
-                    "args": [
-                        "get_db"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "Depends"
-                },
-                {
-                    "type": "name",
-                    "id": "get_db"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "user"
-                    ],
-                    "value": "crud.get_random_user(db)"
-                },
-                {
-                    "type": "name",
-                    "id": "user"
-                },
-                {
-                    "type": "call",
-                    "function": "crud.get_random_user",
-                    "args": [
-                        "db"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "crud"
-                },
-                {
-                    "type": "name",
-                    "id": "db"
-                },
-                {
-                    "type": "name",
-                    "id": "user"
-                },
-                {
-                    "type": "call",
-                    "function": "HTTPException",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "HTTPException"
-                },
-                {
-                    "type": "name",
-                    "id": "user"
-                },
-                {
-                    "type": "call",
-                    "function": "app.get",
-                    "args": [
-                        "'/random_user/'"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "app"
-                },
-                {
-                    "type": "name",
-                    "id": "schemas"
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                },
-                {
-                    "type": "name",
-                    "id": "int"
-                },
-                {
-                    "type": "name",
-                    "id": "Session"
-                },
-                {
-                    "type": "call",
-                    "function": "Depends",
-                    "args": [
-                        "get_db"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "Depends"
-                },
-                {
-                    "type": "name",
-                    "id": "get_db"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "users"
-                    ],
-                    "value": "crud.get_nearest_users(db, email, x)"
-                },
-                {
-                    "type": "name",
-                    "id": "users"
-                },
-                {
-                    "type": "call",
-                    "function": "crud.get_nearest_users",
-                    "args": [
-                        "db",
-                        "email",
-                        "x"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "crud"
-                },
-                {
-                    "type": "name",
-                    "id": "db"
-                },
-                {
-                    "type": "name",
-                    "id": "email"
-                },
-                {
-                    "type": "name",
-                    "id": "x"
-                },
-                {
-                    "type": "name",
-                    "id": "users"
-                },
-                {
-                    "type": "call",
-                    "function": "HTTPException",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "HTTPException"
-                },
-                {
-                    "type": "name",
-                    "id": "users"
-                },
-                {
-                    "type": "call",
-                    "function": "app.get",
-                    "args": [
-                        "'/nearest_users/'"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "app"
-                },
-                {
-                    "type": "name",
-                    "id": "list"
-                },
-                {
-                    "type": "name",
-                    "id": "schemas"
-                },
-                {
-                    "type": "name",
-                    "id": "Session"
-                },
-                {
-                    "type": "call",
-                    "function": "Depends",
-                    "args": [
-                        "get_db"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "Depends"
-                },
-                {
-                    "type": "name",
-                    "id": "get_db"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "username"
-                    ],
-                    "value": "crud.get_random_username(db)"
-                },
-                {
-                    "type": "name",
-                    "id": "username"
-                },
-                {
-                    "type": "call",
-                    "function": "crud.get_random_username",
-                    "args": [
-                        "db"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "crud"
-                },
-                {
-                    "type": "name",
-                    "id": "db"
-                },
-                {
-                    "type": "name",
-                    "id": "username"
-                },
-                {
-                    "type": "call",
-                    "function": "HTTPException",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "HTTPException"
-                },
-                {
-                    "type": "name",
-                    "id": "username"
-                },
-                {
-                    "type": "call",
-                    "function": "app.get",
-                    "args": [
-                        "'/random_username/'"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "app"
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                }
-            ]
+            "children": []
         }
     ],
     "/home/hansal/DatingApp/backend/crud.py": [
@@ -3243,6 +1629,1620 @@
                             "id": "x"
                         }
                     ]
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/models.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "module": "sqlalchemy",
+                    "names": [
+                        {
+                            "module": "Column",
+                            "alias": "Column"
+                        },
+                        {
+                            "module": "Integer",
+                            "alias": "Integer"
+                        },
+                        {
+                            "module": "String",
+                            "alias": "String"
+                        },
+                        {
+                            "module": "Float",
+                            "alias": "Float"
+                        },
+                        {
+                            "module": "DateTime",
+                            "alias": "DateTime"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.ext.declarative",
+                    "names": [
+                        {
+                            "module": "declarative_base",
+                            "alias": "declarative_base"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "datetime",
+                    "names": [
+                        {
+                            "module": "datetime",
+                            "alias": "datetime"
+                        }
+                    ]
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "Base"
+                    ],
+                    "value": "declarative_base()"
+                },
+                {
+                    "type": "name",
+                    "id": "Base"
+                },
+                {
+                    "type": "call",
+                    "function": "declarative_base",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "declarative_base"
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Base"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "__tablename__"
+                            ],
+                            "value": "'users'"
+                        },
+                        {
+                            "type": "name",
+                            "id": "__tablename__"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "uid"
+                            ],
+                            "value": "Column(String, unique=True, primary_key=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "email"
+                            ],
+                            "value": "Column(String, unique=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "first_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "last_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "gender"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "latitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "longitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "Column(String, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_iteration"
+                            ],
+                            "value": "Column(Integer)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Integer"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Integer"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "datetime"
+                            ],
+                            "value": "Column(DateTime, default=datetime.utcnow)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "DateTime"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "DateTime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Base"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "__tablename__"
+                            ],
+                            "value": "'users'"
+                        },
+                        {
+                            "type": "name",
+                            "id": "__tablename__"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "uid"
+                            ],
+                            "value": "Column(String, unique=True, primary_key=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "email"
+                            ],
+                            "value": "Column(String, unique=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "first_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "last_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "gender"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "latitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "longitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "Column(String, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_iteration"
+                            ],
+                            "value": "Column(Integer)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Integer"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Integer"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "datetime"
+                            ],
+                            "value": "Column(DateTime, default=datetime.utcnow)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "DateTime"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "DateTime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        }
+                    ],
+                    "methods": []
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/schemas.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "module": "pydantic",
+                    "names": [
+                        {
+                            "module": "BaseModel",
+                            "alias": "BaseModel"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "datetime",
+                    "names": [
+                        {
+                            "module": "datetime",
+                            "alias": "datetime"
+                        }
+                    ]
+                },
+                {
+                    "type": "class",
+                    "name": "UserBase",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "UserBase",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "UserBase"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "UserBase"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "Message",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "message"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "Message",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "message"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        }
+                    ],
+                    "methods": []
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/main.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "sys",
+                            "alias": "sys"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "os",
+                            "alias": "os"
+                        }
+                    ]
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "current_dir"
+                    ],
+                    "value": "os.path.dirname(os.path.abspath(__file__))"
+                },
+                {
+                    "type": "name",
+                    "id": "current_dir"
+                },
+                {
+                    "type": "call",
+                    "function": "os.path.dirname",
+                    "args": [
+                        "os.path.abspath(__file__)"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "os"
+                },
+                {
+                    "type": "call",
+                    "function": "os.path.abspath",
+                    "args": [
+                        "__file__"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "os"
+                },
+                {
+                    "type": "name",
+                    "id": "__file__"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "parent_dir"
+                    ],
+                    "value": "os.path.dirname(current_dir)"
+                },
+                {
+                    "type": "name",
+                    "id": "parent_dir"
+                },
+                {
+                    "type": "call",
+                    "function": "os.path.dirname",
+                    "args": [
+                        "current_dir"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "os"
+                },
+                {
+                    "type": "name",
+                    "id": "current_dir"
+                },
+                {
+                    "type": "call",
+                    "function": "sys.path.insert",
+                    "args": [
+                        "0",
+                        "parent_dir"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "name",
+                    "id": "parent_dir"
+                },
+                {
+                    "type": "call",
+                    "function": "sys.path.insert",
+                    "args": [
+                        "0",
+                        "current_dir"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "name",
+                    "id": "current_dir"
+                },
+                {
+                    "type": "import",
+                    "module": "database",
+                    "names": [
+                        {
+                            "module": "SessionLocal",
+                            "alias": "SessionLocal"
+                        },
+                        {
+                            "module": "engine",
+                            "alias": "engine"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "typing",
+                    "names": [
+                        {
+                            "module": "Union",
+                            "alias": "Union"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "fastapi",
+                    "names": [
+                        {
+                            "module": "FastAPI",
+                            "alias": "FastAPI"
+                        },
+                        {
+                            "module": "Depends",
+                            "alias": "Depends"
+                        },
+                        {
+                            "module": "HTTPException",
+                            "alias": "HTTPException"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "backend",
+                    "names": [
+                        {
+                            "module": "crud",
+                            "alias": "crud"
+                        },
+                        {
+                            "module": "models",
+                            "alias": "models"
+                        },
+                        {
+                            "module": "schemas",
+                            "alias": "schemas"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "requests",
+                    "names": [
+                        {
+                            "module": "Session",
+                            "alias": "Session"
+                        }
+                    ]
+                },
+                {
+                    "type": "call",
+                    "function": "models.Base.metadata.create_all",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "models"
+                },
+                {
+                    "type": "name",
+                    "id": "engine"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "app"
+                    ],
+                    "value": "FastAPI()"
+                },
+                {
+                    "type": "name",
+                    "id": "app"
+                },
+                {
+                    "type": "call",
+                    "function": "FastAPI",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "FastAPI"
+                },
+                {
+                    "type": "function",
+                    "name": "get_db",
+                    "children": [
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "db"
+                            ],
+                            "value": "SessionLocal()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "call",
+                            "function": "SessionLocal",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "SessionLocal"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.close",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "get_db",
+                    "children": [
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "db"
+                            ],
+                            "value": "SessionLocal()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "call",
+                            "function": "SessionLocal",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "SessionLocal"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.close",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        }
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "int"
+                },
+                {
+                    "type": "name",
+                    "id": "Session"
+                },
+                {
+                    "type": "call",
+                    "function": "Depends",
+                    "args": [
+                        "get_db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Depends"
+                },
+                {
+                    "type": "name",
+                    "id": "get_db"
+                },
+                {
+                    "type": "call",
+                    "function": "crud.fetch_and_store_users",
+                    "args": [
+                        "db",
+                        "num_users"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "crud"
+                },
+                {
+                    "type": "name",
+                    "id": "db"
+                },
+                {
+                    "type": "name",
+                    "id": "num_users"
+                },
+                {
+                    "type": "call",
+                    "function": "app.post",
+                    "args": [
+                        "'/fetch_users/'"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "app"
+                },
+                {
+                    "type": "name",
+                    "id": "schemas"
+                },
+                {
+                    "type": "name",
+                    "id": "Session"
+                },
+                {
+                    "type": "call",
+                    "function": "Depends",
+                    "args": [
+                        "get_db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Depends"
+                },
+                {
+                    "type": "name",
+                    "id": "get_db"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "user"
+                    ],
+                    "value": "crud.get_random_user(db)"
+                },
+                {
+                    "type": "name",
+                    "id": "user"
+                },
+                {
+                    "type": "call",
+                    "function": "crud.get_random_user",
+                    "args": [
+                        "db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "crud"
+                },
+                {
+                    "type": "name",
+                    "id": "db"
+                },
+                {
+                    "type": "name",
+                    "id": "user"
+                },
+                {
+                    "type": "call",
+                    "function": "HTTPException",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "HTTPException"
+                },
+                {
+                    "type": "name",
+                    "id": "user"
+                },
+                {
+                    "type": "call",
+                    "function": "app.get",
+                    "args": [
+                        "'/random_user/'"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "app"
+                },
+                {
+                    "type": "name",
+                    "id": "schemas"
+                },
+                {
+                    "type": "name",
+                    "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "int"
+                },
+                {
+                    "type": "name",
+                    "id": "Session"
+                },
+                {
+                    "type": "call",
+                    "function": "Depends",
+                    "args": [
+                        "get_db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Depends"
+                },
+                {
+                    "type": "name",
+                    "id": "get_db"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "users"
+                    ],
+                    "value": "crud.get_nearest_users(db, email, x)"
+                },
+                {
+                    "type": "name",
+                    "id": "users"
+                },
+                {
+                    "type": "call",
+                    "function": "crud.get_nearest_users",
+                    "args": [
+                        "db",
+                        "email",
+                        "x"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "crud"
+                },
+                {
+                    "type": "name",
+                    "id": "db"
+                },
+                {
+                    "type": "name",
+                    "id": "email"
+                },
+                {
+                    "type": "name",
+                    "id": "x"
+                },
+                {
+                    "type": "name",
+                    "id": "users"
+                },
+                {
+                    "type": "call",
+                    "function": "HTTPException",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "HTTPException"
+                },
+                {
+                    "type": "name",
+                    "id": "users"
+                },
+                {
+                    "type": "call",
+                    "function": "app.get",
+                    "args": [
+                        "'/nearest_users/'"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "app"
+                },
+                {
+                    "type": "name",
+                    "id": "list"
+                },
+                {
+                    "type": "name",
+                    "id": "schemas"
+                },
+                {
+                    "type": "name",
+                    "id": "Session"
+                },
+                {
+                    "type": "call",
+                    "function": "Depends",
+                    "args": [
+                        "get_db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Depends"
+                },
+                {
+                    "type": "name",
+                    "id": "get_db"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "username"
+                    ],
+                    "value": "crud.get_random_username(db)"
+                },
+                {
+                    "type": "name",
+                    "id": "username"
+                },
+                {
+                    "type": "call",
+                    "function": "crud.get_random_username",
+                    "args": [
+                        "db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "crud"
+                },
+                {
+                    "type": "name",
+                    "id": "db"
+                },
+                {
+                    "type": "name",
+                    "id": "username"
+                },
+                {
+                    "type": "call",
+                    "function": "HTTPException",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "HTTPException"
+                },
+                {
+                    "type": "name",
+                    "id": "username"
+                },
+                {
+                    "type": "call",
+                    "function": "app.get",
+                    "args": [
+                        "'/random_username/'"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "app"
+                },
+                {
+                    "type": "name",
+                    "id": "str"
                 }
             ]
         }
@@ -6226,25 +6226,25 @@
                     "children": [
                         {
                             "type": "method",
-                            "name": "get_user_count",
+                            "name": "display_user_insights",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "user_data"
                                     ],
-                                    "value": "make_request('GET', '/user_count/')"
+                                    "value": "make_request('GET', '/user_insights/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
                                     "function": "make_request",
                                     "args": [
                                         "'GET'",
-                                        "'/user_count/'"
+                                        "'/user_insights/'"
                                     ]
                                 },
                                 {
@@ -6253,65 +6253,43 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.subheader",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'User Insights Dashboard'"
                                     ]
                                 },
                                 {
                                     "type": "name",
                                     "id": "st"
                                 },
-                                {
-                                    "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "method",
-                            "name": "get_gender_distribution",
-                            "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "distribution"
+                                        "(col1, col2, col3)"
                                     ],
-                                    "value": "make_request('GET', '/gender_distribution/')"
+                                    "value": "st.columns(3)"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "distribution"
+                                    "id": "col1"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "make_request",
+                                    "function": "st.columns",
                                     "args": [
-                                        "'GET'",
-                                        "'/gender_distribution/'"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "make_request"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
-                                    "args": [
-                                        "'Gender Distribution:'"
+                                        "3"
                                     ]
                                 },
                                 {
@@ -6320,26 +6298,14 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "count"
+                                    "id": "col1"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "distribution.items",
-                                    "args": []
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'{gender}: {count}'"
+                                        "'Total Users'",
+                                        "user_data['total_users']"
                                     ]
                                 },
                                 {
@@ -6348,11 +6314,152 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'Active Users'",
+                                        "user_data['active_users']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'New Users (Last 7 days)'",
+                                        "user_data['new_users_week']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.plotly_chart",
+                                    "args": [
+                                        "create_user_growth_chart(user_data['user_growth'])"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "create_user_growth_chart",
+                                    "args": [
+                                        "user_data['user_growth']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "create_user_growth_chart"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.subheader",
+                                    "args": [
+                                        "'User Demographics'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "(age_col, country_col)"
+                                    ],
+                                    "value": "st.columns(2)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.columns",
+                                    "args": [
+                                        "2"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "user_data['age_distribution']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.map",
+                                    "args": [
+                                        "user_data['user_locations']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
@@ -6364,25 +6471,25 @@
                     "methods": [
                         {
                             "type": "method",
-                            "name": "get_user_count",
+                            "name": "display_user_insights",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "user_data"
                                     ],
-                                    "value": "make_request('GET', '/user_count/')"
+                                    "value": "make_request('GET', '/user_insights/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
                                     "function": "make_request",
                                     "args": [
                                         "'GET'",
-                                        "'/user_count/'"
+                                        "'/user_insights/'"
                                     ]
                                 },
                                 {
@@ -6391,65 +6498,43 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.subheader",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'User Insights Dashboard'"
                                     ]
                                 },
                                 {
                                     "type": "name",
                                     "id": "st"
                                 },
-                                {
-                                    "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "method",
-                            "name": "get_gender_distribution",
-                            "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "distribution"
+                                        "(col1, col2, col3)"
                                     ],
-                                    "value": "make_request('GET', '/gender_distribution/')"
+                                    "value": "st.columns(3)"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "distribution"
+                                    "id": "col1"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "make_request",
+                                    "function": "st.columns",
                                     "args": [
-                                        "'GET'",
-                                        "'/gender_distribution/'"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "make_request"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
-                                    "args": [
-                                        "'Gender Distribution:'"
+                                        "3"
                                     ]
                                 },
                                 {
@@ -6458,26 +6543,14 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "count"
+                                    "id": "col1"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "distribution.items",
-                                    "args": []
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'{gender}: {count}'"
+                                        "'Total Users'",
+                                        "user_data['total_users']"
                                     ]
                                 },
                                 {
@@ -6486,11 +6559,152 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'Active Users'",
+                                        "user_data['active_users']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'New Users (Last 7 days)'",
+                                        "user_data['new_users_week']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.plotly_chart",
+                                    "args": [
+                                        "create_user_growth_chart(user_data['user_growth'])"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "create_user_growth_chart",
+                                    "args": [
+                                        "user_data['user_growth']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "create_user_growth_chart"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.subheader",
+                                    "args": [
+                                        "'User Demographics'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "(age_col, country_col)"
+                                    ],
+                                    "value": "st.columns(2)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.columns",
+                                    "args": [
+                                        "2"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "user_data['age_distribution']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.map",
+                                    "args": [
+                                        "user_data['user_locations']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
@@ -6506,25 +6720,25 @@
                     "children": [
                         {
                             "type": "method",
-                            "name": "get_user_count",
+                            "name": "display_user_insights",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "user_data"
                                     ],
-                                    "value": "make_request('GET', '/user_count/')"
+                                    "value": "make_request('GET', '/user_insights/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
                                     "function": "make_request",
                                     "args": [
                                         "'GET'",
-                                        "'/user_count/'"
+                                        "'/user_insights/'"
                                     ]
                                 },
                                 {
@@ -6533,65 +6747,43 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.subheader",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'User Insights Dashboard'"
                                     ]
                                 },
                                 {
                                     "type": "name",
                                     "id": "st"
                                 },
-                                {
-                                    "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "method",
-                            "name": "get_gender_distribution",
-                            "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "distribution"
+                                        "(col1, col2, col3)"
                                     ],
-                                    "value": "make_request('GET', '/gender_distribution/')"
+                                    "value": "st.columns(3)"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "distribution"
+                                    "id": "col1"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "make_request",
+                                    "function": "st.columns",
                                     "args": [
-                                        "'GET'",
-                                        "'/gender_distribution/'"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "make_request"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
-                                    "args": [
-                                        "'Gender Distribution:'"
+                                        "3"
                                     ]
                                 },
                                 {
@@ -6600,26 +6792,14 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "count"
+                                    "id": "col1"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "distribution.items",
-                                    "args": []
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'{gender}: {count}'"
+                                        "'Total Users'",
+                                        "user_data['total_users']"
                                     ]
                                 },
                                 {
@@ -6628,11 +6808,152 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'Active Users'",
+                                        "user_data['active_users']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'New Users (Last 7 days)'",
+                                        "user_data['new_users_week']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.plotly_chart",
+                                    "args": [
+                                        "create_user_growth_chart(user_data['user_growth'])"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "create_user_growth_chart",
+                                    "args": [
+                                        "user_data['user_growth']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "create_user_growth_chart"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.subheader",
+                                    "args": [
+                                        "'User Demographics'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "(age_col, country_col)"
+                                    ],
+                                    "value": "st.columns(2)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.columns",
+                                    "args": [
+                                        "2"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "user_data['age_distribution']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.map",
+                                    "args": [
+                                        "user_data['user_locations']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
@@ -6644,25 +6965,25 @@
                     "methods": [
                         {
                             "type": "method",
-                            "name": "get_user_count",
+                            "name": "display_user_insights",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "user_data"
                                     ],
-                                    "value": "make_request('GET', '/user_count/')"
+                                    "value": "make_request('GET', '/user_insights/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
                                     "function": "make_request",
                                     "args": [
                                         "'GET'",
-                                        "'/user_count/'"
+                                        "'/user_insights/'"
                                     ]
                                 },
                                 {
@@ -6671,65 +6992,43 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.subheader",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'User Insights Dashboard'"
                                     ]
                                 },
                                 {
                                     "type": "name",
                                     "id": "st"
                                 },
-                                {
-                                    "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "method",
-                            "name": "get_gender_distribution",
-                            "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "distribution"
+                                        "(col1, col2, col3)"
                                     ],
-                                    "value": "make_request('GET', '/gender_distribution/')"
+                                    "value": "st.columns(3)"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "distribution"
+                                    "id": "col1"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "make_request",
+                                    "function": "st.columns",
                                     "args": [
-                                        "'GET'",
-                                        "'/gender_distribution/'"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "make_request"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
-                                    "args": [
-                                        "'Gender Distribution:'"
+                                        "3"
                                     ]
                                 },
                                 {
@@ -6738,26 +7037,14 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "count"
+                                    "id": "col1"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "distribution.items",
-                                    "args": []
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "distribution"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'{gender}: {count}'"
+                                        "'Total Users'",
+                                        "user_data['total_users']"
                                     ]
                                 },
                                 {
@@ -6766,11 +7053,152 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "gender"
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "col2"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'Active Users'",
+                                        "user_data['active_users']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "col3"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.metric",
+                                    "args": [
+                                        "'New Users (Last 7 days)'",
+                                        "user_data['new_users_week']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.plotly_chart",
+                                    "args": [
+                                        "create_user_growth_chart(user_data['user_growth'])"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "create_user_growth_chart",
+                                    "args": [
+                                        "user_data['user_growth']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "create_user_growth_chart"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.subheader",
+                                    "args": [
+                                        "'User Demographics'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "(age_col, country_col)"
+                                    ],
+                                    "value": "st.columns(2)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.columns",
+                                    "args": [
+                                        "2"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "age_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "user_data['age_distribution']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "country_col"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.map",
+                                    "args": [
+                                        "user_data['user_locations']"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user_data"
                                 },
                                 {
                                     "type": "name",
@@ -6779,6 +7207,16 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "type": "function",
+                    "name": "create_user_growth_chart",
+                    "children": []
+                },
+                {
+                    "type": "function",
+                    "name": "create_user_growth_chart",
+                    "children": []
                 }
             ]
         }

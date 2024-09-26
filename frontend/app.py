@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import folium
 from streamlit_folium import folium_static
+import matplotlib.pyplot as plt
 
 # Set the backend URL
 BACKEND_URL = "http://localhost:8000"  # Adjust this if your backend is hosted elsewhere
@@ -134,33 +135,63 @@ class UserManager:
 
 class UserAnalytics:
     @staticmethod
-    def display_user_insights():
-        user_data = make_request("GET", "/user_insights/")
-        if user_data is not None:
-            st.subheader("User Insights Dashboard")
-            
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("Total Users", user_data['total_users'])
-            with col2:
-                st.metric("Active Users", user_data['active_users'], 
-                          delta=user_data['active_users_change'])
-            with col3:
-                st.metric("New Users (Last 7 days)", user_data['new_users_week'])
-            
-            st.plotly_chart(create_user_growth_chart(user_data['user_growth']))
-            
-            st.subheader("User Demographics")
-            age_col, country_col = st.columns(2)
-            with age_col:
-                st.bar_chart(user_data['age_distribution'])
-            with country_col:
-                st.map(user_data['user_locations'])
+    def get_user_count():
+        count = make_request("GET", "/user_count/")
+        if count is not None:
+            st.write(f"Total number of users: {count}")
 
-def create_user_growth_chart(growth_data):
-    # Assume this function creates a Plotly line chart of user growth over time
-    # Implementation details omitted for brevity
-    pass
+    @staticmethod
+    def get_gender_distribution():
+        distribution = make_request("GET", "/gender_distribution/")
+        if distribution:
+            st.write("Gender Distribution:")
+            for gender, count in distribution.items():
+                st.write(f"{gender}: {count}")
+                
+    @staticmethod
+    def plot_gender_distribution():
+        distribution = make_request("GET", "/gender_distribution/")
+        if distribution:
+            fig, ax = plt.subplots()
+            ax.bar(distribution.keys(), distribution.values())
+            ax.set_title("Gender Distribution")
+            ax.set_xlabel("Gender")
+            ax.set_ylabel("Count")
+            st.pyplot(fig)
+
+class LocationAnalytics:
+    @staticmethod
+    def get_user_density():
+        density = make_request("GET", "/user_density/")
+        if density:
+            st.write("User Density by Region:")
+            for region, count in density.items():
+                st.write(f"{region}: {count}")
+
+    @staticmethod
+    def plot_user_density():
+        density = make_request("GET", "/user_density/")
+        if density:
+            fig, ax = plt.subplots()
+            ax.bar(density.keys(), density.values())
+            ax.set_title("User Density by Region")
+            ax.set_xlabel("Region")
+            ax.set_ylabel("Number of Users")
+            plt.xticks(rotation=45)
+            st.pyplot(fig)
+
+    @staticmethod
+    def display_user_map():
+        users = make_request("GET", "/all_users/")
+        if users:
+            m = folium.Map(location=[0, 0], zoom_start=2)
+            for user in users:
+                folium.Marker(
+                    [user['latitude'], user['longitude']],
+                    popup=f"{user['first_name']} {user['last_name']}",
+                    tooltip=user['email']
+                ).add_to(m)
+            folium_static(m)
 
 
 
