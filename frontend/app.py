@@ -81,6 +81,58 @@ with col2:
 
 st.sidebar.info("This application interacts with a FastAPI backend to manage random user data.")
 
+class UserManager:
+    @staticmethod
+    def fetch_and_store_users(num_users):
+        result = make_request("POST", "/users/", json={"num_users": num_users})
+        if result:
+            st.success(result["message"])
+            st.info(f"Run ID: {result['run_id']}")
+
+    @staticmethod
+    def get_random_user():
+        user = make_request("GET", "/random_user/")
+        if user:
+            st.write(f"Name: {user['first_name']} {user['last_name']}")
+            st.write(f"Email: {user['email']}")
+            st.write(f"Gender: {user['gender']}")
+            st.write(f"UID: {user['uid']}")
+            st.write(f"Ingestion Date: {user['datetime']}")
+            m = folium.Map(location=[user['latitude'], user['longitude']], zoom_start=10)
+            folium.Marker(
+                [user['latitude'], user['longitude']],
+                popup=f"{user['first_name']} {user['last_name']}",
+                tooltip=user['email']
+            ).add_to(m)
+            folium_static(m)
+
+    @staticmethod
+    def get_random_username():
+        username = make_request("GET", "/random_username/")
+        if username:
+            st.success(f"Random Username: {username}")
+
+    @staticmethod
+    def find_nearest_users(email, x):
+        if not email or '@' not in email:
+            st.error("Please enter a valid email address")
+        else:
+            users = make_request("GET", "/nearest_users/", params={"email": email, "x": x})
+            if users:
+                m = folium.Map(location=[users[0]['latitude'], users[0]['longitude']], zoom_start=10)
+                
+                for user in users:
+                    st.write(f"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}")
+                    folium.Marker(
+                        [user['latitude'], user['longitude']],
+                        popup=f"{user['first_name']} {user['last_name']}",
+                        tooltip=user['email']
+                    ).add_to(m)
+                
+                folium_static(m)
+
+
+
 
 
 

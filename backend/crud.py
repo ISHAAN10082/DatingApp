@@ -1,11 +1,12 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.sql.expression import func
-import models
+from backend import models
 import requests
 import uuid
 from geopy.distance import geodesic
 from datetime import datetime
-from models import User
+
+
 
 
 def fetch_and_store_users(db: Session, num_users: int):

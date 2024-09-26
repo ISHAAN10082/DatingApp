@@ -17,7 +17,7 @@ class User(UserBase):
     datetime: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class Message(BaseModel):
     message: str

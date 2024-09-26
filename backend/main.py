@@ -1,7 +1,35 @@
+import sys
+import os
+
+# Add the parent directory to sys.path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir)
+sys.path.insert(0, current_dir)
+
+# print("Python path in main.py:", sys.path)
+# print("Current directory in main.py:", __file__)
+
+# try:
+#     from . import crud, models, schemas
+#     print("crud, models, and schemas imported successfully")
+# except ImportError as e:
+#     print(f"Failed to import crud, models, or schemas: {e}")
+
+# try:
+#     from .database import engine, SessionLocal
+#     print("database imported successfully")
+# except ImportError as e:
+#     print(f"Failed to import database: {e}")
+
+# Rest of your main.py code...
+
+from database import SessionLocal, engine
+
 from typing import Union
 from fastapi import FastAPI,Depends, HTTPException
-import crud, models, schemas
-from database import engine, SessionLocal
+from backend import crud, models, schemas
+# from database import engine, SessionLocal
 from requests import  Session
 
 #models.Base.metadata.drop_all(bind=engine)
