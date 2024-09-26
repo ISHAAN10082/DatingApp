@@ -11,6 +11,7 @@ class User(Base):
     uid = Column(String, unique=True,primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
     first_name = Column(String)
+    phone_number = Column(String)
     last_name = Column(String)
     gender = Column(String)
     latitude = Column(Float)
