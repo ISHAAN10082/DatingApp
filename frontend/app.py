@@ -154,10 +154,11 @@ class UserAnalytics:
         distribution = make_request("GET", "/gender_distribution/")
         if distribution:
             fig, ax = plt.subplots()
-            ax.bar(distribution.keys(), distribution.values())
+            ax.bar(distribution.keys(), distribution.values(), color='skyblue')
             ax.set_title("Gender Distribution")
             ax.set_xlabel("Gender")
             ax.set_ylabel("Count")
+            ax.set_facecolor('lightgrey')
             st.pyplot(fig)
 
 class LocationAnalytics:

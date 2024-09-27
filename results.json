@@ -1,11 +1,130 @@
 {
-    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
+    "/home/hansal/DatingApp/frontend/__init__.py": [
         {
             "type": "module",
             "children": []
         }
     ],
-    "/home/hansal/DatingApp/frontend/__init__.py": [
+    "/home/hansal/DatingApp/conftest.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "sys",
+                            "alias": "sys"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "pathlib",
+                    "names": [
+                        {
+                            "module": "Path",
+                            "alias": "Path"
+                        }
+                    ]
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "project_root"
+                    ],
+                    "value": "Path(__file__).parent.absolute()"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "call",
+                    "function": "Path(__file__).parent.absolute",
+                    "args": []
+                },
+                {
+                    "type": "call",
+                    "function": "Path",
+                    "args": [
+                        "__file__"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Path"
+                },
+                {
+                    "type": "name",
+                    "id": "__file__"
+                },
+                {
+                    "type": "call",
+                    "function": "str",
+                    "args": [
+                        "project_root"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "call",
+                    "function": "sys.path.insert",
+                    "args": [
+                        "0",
+                        "str(project_root)"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "call",
+                    "function": "str",
+                    "args": [
+                        "project_root"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "call",
+                    "function": "print",
+                    "args": [
+                        "'Python path:'",
+                        "sys.path"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "print"
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
         {
             "type": "module",
             "children": []
@@ -368,247 +487,10 @@
             ]
         }
     ],
-    "/home/hansal/DatingApp/conftest.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "sys",
-                            "alias": "sys"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "pathlib",
-                    "names": [
-                        {
-                            "module": "Path",
-                            "alias": "Path"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "project_root"
-                    ],
-                    "value": "Path(__file__).parent.absolute()"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "call",
-                    "function": "Path(__file__).parent.absolute",
-                    "args": []
-                },
-                {
-                    "type": "call",
-                    "function": "Path",
-                    "args": [
-                        "__file__"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "Path"
-                },
-                {
-                    "type": "name",
-                    "id": "__file__"
-                },
-                {
-                    "type": "call",
-                    "function": "str",
-                    "args": [
-                        "project_root"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "call",
-                    "function": "sys.path.insert",
-                    "args": [
-                        "0",
-                        "str(project_root)"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "call",
-                    "function": "str",
-                    "args": [
-                        "project_root"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "call",
-                    "function": "print",
-                    "args": [
-                        "'Python path:'",
-                        "sys.path"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "print"
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                }
-            ]
-        }
-    ],
     "/home/hansal/DatingApp/backend/__init__.py": [
         {
             "type": "module",
             "children": []
-        }
-    ],
-    "/home/hansal/DatingApp/backend/database.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "sqlalchemy",
-                    "names": [
-                        {
-                            "module": "create_engine",
-                            "alias": "create_engine"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "sqlalchemy.ext.declarative",
-                    "names": [
-                        {
-                            "module": "declarative_base",
-                            "alias": "declarative_base"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "sqlalchemy.orm",
-                    "names": [
-                        {
-                            "module": "sessionmaker",
-                            "alias": "sessionmaker"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "SQLALCHEMY_DATABASE_URL"
-                    ],
-                    "value": "'sqlite:///./sql_app.db'"
-                },
-                {
-                    "type": "name",
-                    "id": "SQLALCHEMY_DATABASE_URL"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "engine"
-                    ],
-                    "value": "create_engine(SQLALCHEMY_DATABASE_URL, connect_args={'check_same_thread': False})"
-                },
-                {
-                    "type": "name",
-                    "id": "engine"
-                },
-                {
-                    "type": "call",
-                    "function": "create_engine",
-                    "args": [
-                        "SQLALCHEMY_DATABASE_URL"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "create_engine"
-                },
-                {
-                    "type": "name",
-                    "id": "SQLALCHEMY_DATABASE_URL"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "SessionLocal"
-                    ],
-                    "value": "sessionmaker(autocommit=False, autoflush=False, bind=engine)"
-                },
-                {
-                    "type": "name",
-                    "id": "SessionLocal"
-                },
-                {
-                    "type": "call",
-                    "function": "sessionmaker",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "sessionmaker"
-                },
-                {
-                    "type": "name",
-                    "id": "engine"
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "Base"
-                    ],
-                    "value": "declarative_base()"
-                },
-                {
-                    "type": "name",
-                    "id": "Base"
-                },
-                {
-                    "type": "call",
-                    "function": "declarative_base",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "declarative_base"
-                }
-            ]
         }
     ],
     "/home/hansal/DatingApp/backend/models.py": [
@@ -1304,6 +1186,124 @@
                         }
                     ],
                     "methods": []
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/database.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "module": "sqlalchemy",
+                    "names": [
+                        {
+                            "module": "create_engine",
+                            "alias": "create_engine"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.ext.declarative",
+                    "names": [
+                        {
+                            "module": "declarative_base",
+                            "alias": "declarative_base"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.orm",
+                    "names": [
+                        {
+                            "module": "sessionmaker",
+                            "alias": "sessionmaker"
+                        }
+                    ]
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "SQLALCHEMY_DATABASE_URL"
+                    ],
+                    "value": "'sqlite:///./sql_app.db'"
+                },
+                {
+                    "type": "name",
+                    "id": "SQLALCHEMY_DATABASE_URL"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "engine"
+                    ],
+                    "value": "create_engine(SQLALCHEMY_DATABASE_URL, connect_args={'check_same_thread': False})"
+                },
+                {
+                    "type": "name",
+                    "id": "engine"
+                },
+                {
+                    "type": "call",
+                    "function": "create_engine",
+                    "args": [
+                        "SQLALCHEMY_DATABASE_URL"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "create_engine"
+                },
+                {
+                    "type": "name",
+                    "id": "SQLALCHEMY_DATABASE_URL"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "SessionLocal"
+                    ],
+                    "value": "sessionmaker(autocommit=False, autoflush=False, bind=engine)"
+                },
+                {
+                    "type": "name",
+                    "id": "SessionLocal"
+                },
+                {
+                    "type": "call",
+                    "function": "sessionmaker",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "sessionmaker"
+                },
+                {
+                    "type": "name",
+                    "id": "engine"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "Base"
+                    ],
+                    "value": "declarative_base()"
+                },
+                {
+                    "type": "name",
+                    "id": "Base"
+                },
+                {
+                    "type": "call",
+                    "function": "declarative_base",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "declarative_base"
                 }
             ]
         }
