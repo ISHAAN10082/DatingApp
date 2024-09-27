@@ -17,8 +17,8 @@ def make_request(method, endpoint, **kwargs):
         response = requests.request(method, f"{BACKEND_URL}{endpoint}", **kwargs)
         response.raise_for_status()
         return response.json()
-    except requests.RequestException as e:
-        st.error(f"An error occurred: {str(e)}")
+    except requests.exceptions.RequestException as e:
+        st.error(f"An error occurred: {e}")
         return None
 
 # Create two columns for the main layout
