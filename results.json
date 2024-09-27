@@ -5,12 +5,6 @@
             "children": []
         }
     ],
-    "/home/hansal/DatingApp/frontend/__init__.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
     "/home/hansal/DatingApp/conftest.py": [
         {
             "type": "module",
@@ -128,6 +122,12 @@
                     "id": "sys"
                 }
             ]
+        }
+    ],
+    "/home/hansal/DatingApp/frontend/__init__.py": [
+        {
+            "type": "module",
+            "children": []
         }
     ],
     "/home/hansal/DatingApp/backend/__init__.py": [
@@ -250,363 +250,6 @@
                 {
                     "type": "name",
                     "id": "declarative_base"
-                }
-            ]
-        }
-    ],
-    "/home/hansal/DatingApp/backend/schemas.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "pydantic",
-                    "names": [
-                        {
-                            "module": "BaseModel",
-                            "alias": "BaseModel"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "datetime",
-                    "names": [
-                        {
-                            "module": "datetime",
-                            "alias": "datetime"
-                        }
-                    ]
-                },
-                {
-                    "type": "class",
-                    "name": "UserBase",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "UserBase",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "UserBase"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "UserBase"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "Message",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "message"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "Message",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "message"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        }
-                    ],
-                    "methods": []
                 }
             ]
         }
@@ -1308,6 +951,363 @@
             ]
         }
     ],
+    "/home/hansal/DatingApp/backend/schemas.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "module": "pydantic",
+                    "names": [
+                        {
+                            "module": "BaseModel",
+                            "alias": "BaseModel"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "datetime",
+                    "names": [
+                        {
+                            "module": "datetime",
+                            "alias": "datetime"
+                        }
+                    ]
+                },
+                {
+                    "type": "class",
+                    "name": "UserBase",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "UserBase",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "UserBase"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "UserBase"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "Message",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "message"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "Message",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "message"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        }
+                    ],
+                    "methods": []
+                }
+            ]
+        }
+    ],
     "/home/hansal/DatingApp/backend/main.py": [
         {
             "type": "module",
@@ -1985,6 +1985,70 @@
                 {
                     "type": "name",
                     "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "Session"
+                },
+                {
+                    "type": "call",
+                    "function": "Depends",
+                    "args": [
+                        "get_db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Depends"
+                },
+                {
+                    "type": "name",
+                    "id": "get_db"
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "count"
+                    ],
+                    "value": "crud.get_user_count(db)"
+                },
+                {
+                    "type": "name",
+                    "id": "count"
+                },
+                {
+                    "type": "call",
+                    "function": "crud.get_user_count",
+                    "args": [
+                        "db"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "crud"
+                },
+                {
+                    "type": "name",
+                    "id": "db"
+                },
+                {
+                    "type": "name",
+                    "id": "count"
+                },
+                {
+                    "type": "call",
+                    "function": "app.get",
+                    "args": [
+                        "'/user_count/'"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "app"
+                },
+                {
+                    "type": "name",
+                    "id": "int"
                 }
             ]
         }
@@ -6387,9 +6451,25 @@
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'Total Users'",
+                                        "count"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "{'Users': count}"
                                     ]
                                 },
                                 {
@@ -6664,9 +6744,25 @@
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'Total Users'",
+                                        "count"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "{'Users': count}"
                                     ]
                                 },
                                 {
@@ -6945,9 +7041,25 @@
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'Total Users'",
+                                        "count"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "{'Users': count}"
                                     ]
                                 },
                                 {
@@ -7222,9 +7334,25 @@
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.write",
+                                    "function": "st.metric",
                                     "args": [
-                                        "f'Total number of users: {count}'"
+                                        "'Total Users'",
+                                        "count"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "count"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.bar_chart",
+                                    "args": [
+                                        "{'Users': count}"
                                     ]
                                 },
                                 {
