@@ -174,12 +174,13 @@ class LocationAnalytics:
     def plot_user_density():
         density = make_request("GET", "/user_density/")
         if density:
-            fig, ax = plt.subplots()
-            ax.bar(density.keys(), density.values())
+            fig, ax = plt.subplots(figsize=(10, 6))
+            ax.bar(density.keys(), density.values(), color='skyblue')
             ax.set_title("User Density by Region")
             ax.set_xlabel("Region")
             ax.set_ylabel("Number of Users")
             plt.xticks(rotation=45)
+            plt.grid(True, which='both', linestyle='--', linewidth=0.5)
             st.pyplot(fig)
 
     @staticmethod
