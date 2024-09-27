@@ -189,11 +189,12 @@ class LocationAnalytics:
         if users:
             m = folium.Map(location=[0, 0], zoom_start=2)
             for user in users:
-                folium.Marker(
+                marker = folium.Marker(
                     [user['latitude'], user['longitude']],
                     popup=f"{user['first_name']} {user['last_name']}",
                     tooltip=user['email']
-                ).add_to(m)
+                )
+                marker.add_to(m)
             folium_static(m)
 
 

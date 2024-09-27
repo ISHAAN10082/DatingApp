@@ -1,22 +1,4 @@
 {
-    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
-    "/home/hansal/DatingApp/frontend/__init__.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
-    "/home/hansal/DatingApp/backend/__init__.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
     "/home/hansal/DatingApp/conftest.py": [
         {
             "type": "module",
@@ -136,6 +118,18 @@
             ]
         }
     ],
+    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
+        {
+            "type": "module",
+            "children": []
+        }
+    ],
+    "/home/hansal/DatingApp/frontend/__init__.py": [
+        {
+            "type": "module",
+            "children": []
+        }
+    ],
     "/home/hansal/DatingApp/backend/database.py": [
         {
             "type": "module",
@@ -252,6 +246,12 @@
                     "id": "declarative_base"
                 }
             ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/__init__.py": [
+        {
+            "type": "module",
+            "children": []
         }
     ],
     "/home/hansal/DatingApp/backend/schemas.py": [
@@ -607,6 +607,1385 @@
                         }
                     ],
                     "methods": []
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/crud.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.orm",
+                    "names": [
+                        {
+                            "module": "Session",
+                            "alias": "Session"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.sql.expression",
+                    "names": [
+                        {
+                            "module": "func",
+                            "alias": "func"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "backend",
+                    "names": [
+                        {
+                            "module": "models",
+                            "alias": "models"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "requests",
+                            "alias": "requests"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "uuid",
+                            "alias": "uuid"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "geopy.distance",
+                    "names": [
+                        {
+                            "module": "geodesic",
+                            "alias": "geodesic"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "datetime",
+                    "names": [
+                        {
+                            "module": "datetime",
+                            "alias": "datetime"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "fetch_and_store_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "str(uuid.uuid4())"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "str",
+                            "args": [
+                                "uuid.uuid4()"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "call",
+                            "function": "uuid.uuid4",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "uuid"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_datetime"
+                            ],
+                            "value": "datetime.utcnow()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "datetime.utcnow",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "users_to_add"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "call",
+                            "function": "range",
+                            "args": [
+                                "num_users"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "range"
+                        },
+                        {
+                            "type": "name",
+                            "id": "num_users"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "response"
+                            ],
+                            "value": "requests.get('https://randomuser.me/api/')"
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "call",
+                            "function": "requests.get",
+                            "args": [
+                                "'https://randomuser.me/api/'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.raise_for_status",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "data"
+                            ],
+                            "value": "response.json()['results'][0]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.json",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "print",
+                            "args": [
+                                "f'An error occurred while fetching user data: {e}'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "print"
+                        },
+                        {
+                            "type": "name",
+                            "id": "e"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "models.User",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['latitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['longitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "users_to_add.append",
+                            "args": [
+                                "user"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.add_all",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.commit",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "total_users"
+                            ],
+                            "value": "db.query(models.User).count()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).count",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "len",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "len"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "fetch_and_store_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "str(uuid.uuid4())"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "str",
+                            "args": [
+                                "uuid.uuid4()"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "call",
+                            "function": "uuid.uuid4",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "uuid"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_datetime"
+                            ],
+                            "value": "datetime.utcnow()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "datetime.utcnow",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "users_to_add"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "call",
+                            "function": "range",
+                            "args": [
+                                "num_users"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "range"
+                        },
+                        {
+                            "type": "name",
+                            "id": "num_users"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "response"
+                            ],
+                            "value": "requests.get('https://randomuser.me/api/')"
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "call",
+                            "function": "requests.get",
+                            "args": [
+                                "'https://randomuser.me/api/'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.raise_for_status",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "data"
+                            ],
+                            "value": "response.json()['results'][0]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.json",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "print",
+                            "args": [
+                                "f'An error occurred while fetching user data: {e}'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "print"
+                        },
+                        {
+                            "type": "name",
+                            "id": "e"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "models.User",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['latitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['longitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "users_to_add.append",
+                            "args": [
+                                "user"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.add_all",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.commit",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "total_users"
+                            ],
+                            "value": "db.query(models.User).count()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).count",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "len",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "len"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_user",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by(func.random()).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by",
+                            "args": [
+                                "func.random()"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "func.random",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "func"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_user",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by(func.random()).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by",
+                            "args": [
+                                "func.random()"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "func.random",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "func"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_username",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "random_user"
+                            ],
+                            "value": "get_random_user(db)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "get_random_user",
+                            "args": [
+                                "db"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "get_random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_username",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "random_user"
+                            ],
+                            "value": "get_random_user(db)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "get_random_user",
+                            "args": [
+                                "db"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "get_random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "get_nearest_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "db.query(models.User).filter(models.User.email == email).first()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter(models.User.email == email).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter",
+                            "args": [
+                                "models.User.email == email"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "all_users"
+                            ],
+                            "value": "db.query(models.User).all()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).all",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distances"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distance"
+                            ],
+                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "geodesic",
+                            "args": [
+                                "(user.latitude, user.longitude)",
+                                "(other_user.latitude, other_user.longitude)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "geodesic"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.append",
+                            "args": [
+                                "(other_user, distance)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.sort",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "lambda",
+                            "children": [
+                                {
+                                    "type": "name",
+                                    "id": "x"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "x"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "get_nearest_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "db.query(models.User).filter(models.User.email == email).first()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter(models.User.email == email).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter",
+                            "args": [
+                                "models.User.email == email"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "all_users"
+                            ],
+                            "value": "db.query(models.User).all()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).all",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distances"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distance"
+                            ],
+                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "geodesic",
+                            "args": [
+                                "(user.latitude, user.longitude)",
+                                "(other_user.latitude, other_user.longitude)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "geodesic"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.append",
+                            "args": [
+                                "(other_user, distance)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.sort",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "lambda",
+                            "children": [
+                                {
+                                    "type": "name",
+                                    "id": "x"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "x"
+                        }
+                    ]
                 }
             ]
         }
@@ -2049,1385 +3428,6 @@
                 {
                     "type": "name",
                     "id": "int"
-                }
-            ]
-        }
-    ],
-    "/home/hansal/DatingApp/backend/crud.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "sqlalchemy.orm",
-                    "names": [
-                        {
-                            "module": "Session",
-                            "alias": "Session"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "sqlalchemy.sql.expression",
-                    "names": [
-                        {
-                            "module": "func",
-                            "alias": "func"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "backend",
-                    "names": [
-                        {
-                            "module": "models",
-                            "alias": "models"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "requests",
-                            "alias": "requests"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "uuid",
-                            "alias": "uuid"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "geopy.distance",
-                    "names": [
-                        {
-                            "module": "geodesic",
-                            "alias": "geodesic"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "datetime",
-                    "names": [
-                        {
-                            "module": "datetime",
-                            "alias": "datetime"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "fetch_and_store_users",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "str(uuid.uuid4())"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "str",
-                            "args": [
-                                "uuid.uuid4()"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "call",
-                            "function": "uuid.uuid4",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "uuid"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_datetime"
-                            ],
-                            "value": "datetime.utcnow()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "datetime.utcnow",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "users_to_add"
-                            ],
-                            "value": "[]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "call",
-                            "function": "range",
-                            "args": [
-                                "num_users"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "range"
-                        },
-                        {
-                            "type": "name",
-                            "id": "num_users"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "response"
-                            ],
-                            "value": "requests.get('https://randomuser.me/api/')"
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "call",
-                            "function": "requests.get",
-                            "args": [
-                                "'https://randomuser.me/api/'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.raise_for_status",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "data"
-                            ],
-                            "value": "response.json()['results'][0]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.json",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "print",
-                            "args": [
-                                "f'An error occurred while fetching user data: {e}'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "print"
-                        },
-                        {
-                            "type": "name",
-                            "id": "e"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "user"
-                            ],
-                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "models.User",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['latitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['longitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "users_to_add.append",
-                            "args": [
-                                "user"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.add_all",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.commit",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "total_users"
-                            ],
-                            "value": "db.query(models.User).count()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).count",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "len",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "len"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "fetch_and_store_users",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "str(uuid.uuid4())"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "str",
-                            "args": [
-                                "uuid.uuid4()"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "call",
-                            "function": "uuid.uuid4",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "uuid"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_datetime"
-                            ],
-                            "value": "datetime.utcnow()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "datetime.utcnow",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "users_to_add"
-                            ],
-                            "value": "[]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "call",
-                            "function": "range",
-                            "args": [
-                                "num_users"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "range"
-                        },
-                        {
-                            "type": "name",
-                            "id": "num_users"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "response"
-                            ],
-                            "value": "requests.get('https://randomuser.me/api/')"
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "call",
-                            "function": "requests.get",
-                            "args": [
-                                "'https://randomuser.me/api/'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.raise_for_status",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "data"
-                            ],
-                            "value": "response.json()['results'][0]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.json",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "print",
-                            "args": [
-                                "f'An error occurred while fetching user data: {e}'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "print"
-                        },
-                        {
-                            "type": "name",
-                            "id": "e"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "user"
-                            ],
-                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "models.User",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['latitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['longitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "users_to_add.append",
-                            "args": [
-                                "user"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.add_all",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.commit",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "total_users"
-                            ],
-                            "value": "db.query(models.User).count()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).count",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "len",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "len"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_random_user",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by(func.random()).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by",
-                            "args": [
-                                "func.random()"
-                            ]
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "func.random",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "func"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_random_user",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by(func.random()).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by",
-                            "args": [
-                                "func.random()"
-                            ]
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "func.random",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "func"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_random_username",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "random_user"
-                            ],
-                            "value": "get_random_user(db)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "get_random_user",
-                            "args": [
-                                "db"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "get_random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_random_username",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "random_user"
-                            ],
-                            "value": "get_random_user(db)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "get_random_user",
-                            "args": [
-                                "db"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "get_random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_nearest_users",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "user"
-                            ],
-                            "value": "db.query(models.User).filter(models.User.email == email).first()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).filter(models.User.email == email).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).filter",
-                            "args": [
-                                "models.User.email == email"
-                            ]
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "all_users"
-                            ],
-                            "value": "db.query(models.User).all()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "all_users"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).all",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "distances"
-                            ],
-                            "value": "[]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "all_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "distance"
-                            ],
-                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distance"
-                        },
-                        {
-                            "type": "call",
-                            "function": "geodesic",
-                            "args": [
-                                "(user.latitude, user.longitude)",
-                                "(other_user.latitude, other_user.longitude)"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "geodesic"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "distances.append",
-                            "args": [
-                                "(other_user, distance)"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distance"
-                        },
-                        {
-                            "type": "call",
-                            "function": "distances.sort",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "lambda",
-                            "children": [
-                                {
-                                    "type": "name",
-                                    "id": "x"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "u"
-                        },
-                        {
-                            "type": "name",
-                            "id": "u"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "name",
-                            "id": "x"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_nearest_users",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "user"
-                            ],
-                            "value": "db.query(models.User).filter(models.User.email == email).first()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).filter(models.User.email == email).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).filter",
-                            "args": [
-                                "models.User.email == email"
-                            ]
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "all_users"
-                            ],
-                            "value": "db.query(models.User).all()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "all_users"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).all",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "distances"
-                            ],
-                            "value": "[]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "all_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "distance"
-                            ],
-                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distance"
-                        },
-                        {
-                            "type": "call",
-                            "function": "geodesic",
-                            "args": [
-                                "(user.latitude, user.longitude)",
-                                "(other_user.latitude, other_user.longitude)"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "geodesic"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "distances.append",
-                            "args": [
-                                "(other_user, distance)"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distance"
-                        },
-                        {
-                            "type": "call",
-                            "function": "distances.sort",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "lambda",
-                            "children": [
-                                {
-                                    "type": "name",
-                                    "id": "x"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "u"
-                        },
-                        {
-                            "type": "name",
-                            "id": "u"
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "name",
-                            "id": "x"
-                        }
-                    ]
                 }
             ]
         }
@@ -7762,7 +7762,7 @@
                                     "targets": [
                                         "(fig, ax)"
                                     ],
-                                    "value": "plt.subplots()"
+                                    "value": "plt.subplots(figsize=(10, 6))"
                                 },
                                 {
                                     "type": "name",
@@ -7848,6 +7848,17 @@
                                     "type": "call",
                                     "function": "plt.xticks",
                                     "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "plt"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "plt.grid",
+                                    "args": [
+                                        "True"
+                                    ]
                                 },
                                 {
                                     "type": "name",
@@ -8118,7 +8129,7 @@
                                     "targets": [
                                         "(fig, ax)"
                                     ],
-                                    "value": "plt.subplots()"
+                                    "value": "plt.subplots(figsize=(10, 6))"
                                 },
                                 {
                                     "type": "name",
@@ -8204,6 +8215,17 @@
                                     "type": "call",
                                     "function": "plt.xticks",
                                     "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "plt"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "plt.grid",
+                                    "args": [
+                                        "True"
+                                    ]
                                 },
                                 {
                                     "type": "name",
@@ -8478,7 +8500,7 @@
                                     "targets": [
                                         "(fig, ax)"
                                     ],
-                                    "value": "plt.subplots()"
+                                    "value": "plt.subplots(figsize=(10, 6))"
                                 },
                                 {
                                     "type": "name",
@@ -8564,6 +8586,17 @@
                                     "type": "call",
                                     "function": "plt.xticks",
                                     "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "plt"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "plt.grid",
+                                    "args": [
+                                        "True"
+                                    ]
                                 },
                                 {
                                     "type": "name",
@@ -8834,7 +8867,7 @@
                                     "targets": [
                                         "(fig, ax)"
                                     ],
-                                    "value": "plt.subplots()"
+                                    "value": "plt.subplots(figsize=(10, 6))"
                                 },
                                 {
                                     "type": "name",
@@ -8920,6 +8953,17 @@
                                     "type": "call",
                                     "function": "plt.xticks",
                                     "args": []
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "plt"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "plt.grid",
+                                    "args": [
+                                        "True"
+                                    ]
                                 },
                                 {
                                     "type": "name",
