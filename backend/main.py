@@ -81,7 +81,7 @@ async def get_random_username(db: Session = Depends(get_db)):
     username = crud.get_random_username(db)
     if not username:
         raise HTTPException(status_code=404, detail="No users found in the database")
-    return username
+    return username + "!"
 
 @app.get("/user_count/", response_model=int)
 async def get_user_count(db: Session = Depends(get_db)):
