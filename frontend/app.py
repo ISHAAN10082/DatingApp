@@ -134,12 +134,18 @@ class UserManager:
 
 
 class UserAnalytics:
-    @staticmethod
     def get_user_count():
-        count = make_request("GET", "/user_count/")
-        if count is not None:
-            st.metric("Total Users", count)
-            st.bar_chart({"Users": count})
+        # Fetch user count data
+        response = make_request("GET", "/user_count/")
+        if response is not None:
+            # Display user count with additional insights
+            st.write("### User Count Overview")
+            st.write(f"**Total Users:** {response}")
+
+            # Create a simple line chart to show user growth over time (mock data for illustration)
+            growth_data = {"Days": ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+                           "User Count": [response - 5, response - 3, response, response + 2, response + 5]}
+            st.line_chart(growth_data)
 
     @staticmethod
     def get_gender_distribution():
