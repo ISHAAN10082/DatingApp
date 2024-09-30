@@ -143,11 +143,20 @@ class UserAnalytics:
 
     @staticmethod
     def get_gender_distribution():
-        distribution = make_request("GET", "/gender_distribution/")
-        if distribution:
+        # Fetch gender distribution data
+        response = make_request("GET", "/gender_distribution/")
+        if response:
+            # Create a pie chart for gender distribution
+            labels = list(response.keys())
+            sizes = list(response.values())
+            colors = ['#ff9999','#66b3ff','#99ff99']  # Example colors for the pie chart
+            
+            # Display the pie chart using Streamlit
             st.write("Gender Distribution:")
-            for gender, count in distribution.items():
-                st.write(f"{gender}: {count}")
+            st.pyplot(plt.figure(figsize=(6, 6)))
+            plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
+            plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+            st.pyplot()
                 
     @staticmethod
     def plot_gender_distribution():
