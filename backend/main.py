@@ -85,5 +85,5 @@ async def get_random_username(db: Session = Depends(get_db)):
 
 @app.get("/user_count/", response_model=int)
 async def get_user_count(db: Session = Depends(get_db)):
-    count = crud.get_user_count(db)
-    return count
+    user_count = await crud.get_user_count(db)
+    return user_count
