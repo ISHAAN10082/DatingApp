@@ -187,14 +187,22 @@ class LocationAnalytics:
     def display_user_map():
         users = make_request("GET", "/all_users/")
         if users:
-            m = folium.Map(location=[0, 0], zoom_start=2)
-            for user in users:
-                marker = folium.Marker(
-                    [user['latitude'], user['longitude']],
-                    popup=f"{user['first_name']} {user['last_name']}",
-                    tooltip=user['email']
-                )
-                marker.add_to(m)
+            # Using a different mapping library or approach
+            map_data = [{"name": f"{user['first_name']} {user['last_name']}", 
+                          "location": [user['latitude'], user['longitude']], 
+                          "email": user['email']} for user in users]
+            
+            # Create a map centered on the average location of users
+            avg_lat = sum(user['latitude'] for user in users) / len(users)
+            avg_lon = sum(user['longitude'] for user in users) / len(users)
+            m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)
+
+            for data in map_data:
+                folium.Marker(
+                    location=data['location'],
+                    popup=data['name'],
+                    tooltip=data['email']
+                ).add_to(m)
             folium_static(m)
 
 
