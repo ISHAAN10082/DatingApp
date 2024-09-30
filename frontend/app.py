@@ -204,6 +204,11 @@ class LocationAnalytics:
                     tooltip=data['email']
                 ).add_to(m)
             folium_static(m)
+            
+            
+def dummy_function():
+    pass
+
 
 
 

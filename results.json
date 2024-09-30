@@ -1,8 +1,133 @@
 {
+    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
+        {
+            "type": "module",
+            "children": []
+        }
+    ],
     "/home/hansal/DatingApp/frontend/__init__.py": [
         {
             "type": "module",
             "children": []
+        }
+    ],
+    "/home/hansal/DatingApp/conftest.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "sys",
+                            "alias": "sys"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "pathlib",
+                    "names": [
+                        {
+                            "module": "Path",
+                            "alias": "Path"
+                        }
+                    ]
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "project_root"
+                    ],
+                    "value": "Path(__file__).parent.absolute()"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "call",
+                    "function": "Path(__file__).parent.absolute",
+                    "args": []
+                },
+                {
+                    "type": "call",
+                    "function": "Path",
+                    "args": [
+                        "__file__"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "Path"
+                },
+                {
+                    "type": "name",
+                    "id": "__file__"
+                },
+                {
+                    "type": "call",
+                    "function": "str",
+                    "args": [
+                        "project_root"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "call",
+                    "function": "sys.path.insert",
+                    "args": [
+                        "0",
+                        "str(project_root)"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                },
+                {
+                    "type": "call",
+                    "function": "str",
+                    "args": [
+                        "project_root"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "str"
+                },
+                {
+                    "type": "name",
+                    "id": "project_root"
+                },
+                {
+                    "type": "call",
+                    "function": "print",
+                    "args": [
+                        "'Python path:'",
+                        "sys.path"
+                    ]
+                },
+                {
+                    "type": "name",
+                    "id": "print"
+                },
+                {
+                    "type": "name",
+                    "id": "sys"
+                }
+            ]
         }
     ],
     "/home/hansal/DatingApp/backend/__init__.py": [
@@ -11,10 +136,1058 @@
             "children": []
         }
     ],
-    "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
+    "/home/hansal/DatingApp/backend/schemas.py": [
         {
             "type": "module",
-            "children": []
+            "children": [
+                {
+                    "type": "import",
+                    "module": "pydantic",
+                    "names": [
+                        {
+                            "module": "BaseModel",
+                            "alias": "BaseModel"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "datetime",
+                    "names": [
+                        {
+                            "module": "datetime",
+                            "alias": "datetime"
+                        }
+                    ]
+                },
+                {
+                    "type": "class",
+                    "name": "UserBase",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "UserBase",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "UserBase"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "UserBase"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        },
+                        {
+                            "type": "class",
+                            "name": "Config",
+                            "children": [
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "from_attributes"
+                                    ],
+                                    "value": "True"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "from_attributes"
+                                }
+                            ],
+                            "methods": []
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "Message",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "message"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "Message",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "BaseModel"
+                        },
+                        {
+                            "type": "name",
+                            "id": "message"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        }
+                    ],
+                    "methods": []
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/models.py": [
+        {
+            "type": "module",
+            "children": [
+                {
+                    "type": "import",
+                    "module": "sqlalchemy",
+                    "names": [
+                        {
+                            "module": "Column",
+                            "alias": "Column"
+                        },
+                        {
+                            "module": "Integer",
+                            "alias": "Integer"
+                        },
+                        {
+                            "module": "String",
+                            "alias": "String"
+                        },
+                        {
+                            "module": "Float",
+                            "alias": "Float"
+                        },
+                        {
+                            "module": "DateTime",
+                            "alias": "DateTime"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.ext.declarative",
+                    "names": [
+                        {
+                            "module": "declarative_base",
+                            "alias": "declarative_base"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "datetime",
+                    "names": [
+                        {
+                            "module": "datetime",
+                            "alias": "datetime"
+                        }
+                    ]
+                },
+                {
+                    "type": "assignment",
+                    "targets": [
+                        "Base"
+                    ],
+                    "value": "declarative_base()"
+                },
+                {
+                    "type": "name",
+                    "id": "Base"
+                },
+                {
+                    "type": "call",
+                    "function": "declarative_base",
+                    "args": []
+                },
+                {
+                    "type": "name",
+                    "id": "declarative_base"
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Base"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "__tablename__"
+                            ],
+                            "value": "'users'"
+                        },
+                        {
+                            "type": "name",
+                            "id": "__tablename__"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "uid"
+                            ],
+                            "value": "Column(String, unique=True, primary_key=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "email"
+                            ],
+                            "value": "Column(String, unique=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "first_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "phone_number"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "phone_number"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "last_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "gender"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "latitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "longitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "Column(String, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_iteration"
+                            ],
+                            "value": "Column(Integer)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Integer"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Integer"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "datetime"
+                            ],
+                            "value": "Column(DateTime, default=datetime.utcnow)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "DateTime"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "DateTime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        }
+                    ],
+                    "methods": []
+                },
+                {
+                    "type": "class",
+                    "name": "User",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Base"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "__tablename__"
+                            ],
+                            "value": "'users'"
+                        },
+                        {
+                            "type": "name",
+                            "id": "__tablename__"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "uid"
+                            ],
+                            "value": "Column(String, unique=True, primary_key=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "email"
+                            ],
+                            "value": "Column(String, unique=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "first_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "first_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "phone_number"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "phone_number"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "last_name"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "last_name"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "gender"
+                            ],
+                            "value": "Column(String)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "gender"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "latitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "longitude"
+                            ],
+                            "value": "Column(Float)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "Column(String, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_iteration"
+                            ],
+                            "value": "Column(Integer)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Integer"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Integer"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "datetime"
+                            ],
+                            "value": "Column(DateTime, default=datetime.utcnow)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "DateTime"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "DateTime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        }
+                    ],
+                    "methods": []
+                }
+            ]
         }
     ],
     "/home/hansal/DatingApp/backend/database.py": [
@@ -876,1179 +2049,6 @@
                 {
                     "type": "name",
                     "id": "int"
-                }
-            ]
-        }
-    ],
-    "/home/hansal/DatingApp/backend/models.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "sqlalchemy",
-                    "names": [
-                        {
-                            "module": "Column",
-                            "alias": "Column"
-                        },
-                        {
-                            "module": "Integer",
-                            "alias": "Integer"
-                        },
-                        {
-                            "module": "String",
-                            "alias": "String"
-                        },
-                        {
-                            "module": "Float",
-                            "alias": "Float"
-                        },
-                        {
-                            "module": "DateTime",
-                            "alias": "DateTime"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "sqlalchemy.ext.declarative",
-                    "names": [
-                        {
-                            "module": "declarative_base",
-                            "alias": "declarative_base"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "datetime",
-                    "names": [
-                        {
-                            "module": "datetime",
-                            "alias": "datetime"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "Base"
-                    ],
-                    "value": "declarative_base()"
-                },
-                {
-                    "type": "name",
-                    "id": "Base"
-                },
-                {
-                    "type": "call",
-                    "function": "declarative_base",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "declarative_base"
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Base"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "__tablename__"
-                            ],
-                            "value": "'users'"
-                        },
-                        {
-                            "type": "name",
-                            "id": "__tablename__"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "uid"
-                            ],
-                            "value": "Column(String, unique=True, primary_key=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "email"
-                            ],
-                            "value": "Column(String, unique=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "first_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "phone_number"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "phone_number"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "last_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "gender"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "latitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "longitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "Column(String, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_iteration"
-                            ],
-                            "value": "Column(Integer)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Integer"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Integer"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "datetime"
-                            ],
-                            "value": "Column(DateTime, default=datetime.utcnow)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "DateTime"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "DateTime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Base"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "__tablename__"
-                            ],
-                            "value": "'users'"
-                        },
-                        {
-                            "type": "name",
-                            "id": "__tablename__"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "uid"
-                            ],
-                            "value": "Column(String, unique=True, primary_key=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "email"
-                            ],
-                            "value": "Column(String, unique=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "first_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "phone_number"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "phone_number"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "last_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "gender"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "latitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "longitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "Column(String, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_iteration"
-                            ],
-                            "value": "Column(Integer)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Integer"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Integer"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "datetime"
-                            ],
-                            "value": "Column(DateTime, default=datetime.utcnow)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "DateTime"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "DateTime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        }
-                    ],
-                    "methods": []
-                }
-            ]
-        }
-    ],
-    "/home/hansal/DatingApp/backend/schemas.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "pydantic",
-                    "names": [
-                        {
-                            "module": "BaseModel",
-                            "alias": "BaseModel"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "datetime",
-                    "names": [
-                        {
-                            "module": "datetime",
-                            "alias": "datetime"
-                        }
-                    ]
-                },
-                {
-                    "type": "class",
-                    "name": "UserBase",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "UserBase",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "UserBase"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "UserBase"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        },
-                        {
-                            "type": "class",
-                            "name": "Config",
-                            "children": [
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "from_attributes"
-                                    ],
-                                    "value": "True"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "from_attributes"
-                                }
-                            ],
-                            "methods": []
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "Message",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "message"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "Message",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "BaseModel"
-                        },
-                        {
-                            "type": "name",
-                            "id": "message"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        }
-                    ],
-                    "methods": []
-                }
-            ]
-        }
-    ],
-    "/home/hansal/DatingApp/conftest.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "sys",
-                            "alias": "sys"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "pathlib",
-                    "names": [
-                        {
-                            "module": "Path",
-                            "alias": "Path"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "project_root"
-                    ],
-                    "value": "Path(__file__).parent.absolute()"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "call",
-                    "function": "Path(__file__).parent.absolute",
-                    "args": []
-                },
-                {
-                    "type": "call",
-                    "function": "Path",
-                    "args": [
-                        "__file__"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "Path"
-                },
-                {
-                    "type": "name",
-                    "id": "__file__"
-                },
-                {
-                    "type": "call",
-                    "function": "str",
-                    "args": [
-                        "project_root"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "call",
-                    "function": "sys.path.insert",
-                    "args": [
-                        "0",
-                        "str(project_root)"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
-                },
-                {
-                    "type": "call",
-                    "function": "str",
-                    "args": [
-                        "project_root"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "str"
-                },
-                {
-                    "type": "name",
-                    "id": "project_root"
-                },
-                {
-                    "type": "call",
-                    "function": "print",
-                    "args": [
-                        "'Python path:'",
-                        "sys.path"
-                    ]
-                },
-                {
-                    "type": "name",
-                    "id": "print"
-                },
-                {
-                    "type": "name",
-                    "id": "sys"
                 }
             ]
         }
@@ -7897,9 +7897,146 @@
                                 {
                                     "type": "assignment",
                                     "targets": [
+                                        "map_data"
+                                    ],
+                                    "value": "[{'name': f\"{user['first_name']} {user['last_name']}\", 'location': [user['latitude'], user['longitude']], 'email': user['email']} for user in users]"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lat"
+                                    ],
+                                    "value": "sum((user['latitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lat"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['latitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lon"
+                                    ],
+                                    "value": "sum((user['longitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lon"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['longitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
                                         "m"
                                     ],
-                                    "value": "folium.Map(location=[0, 0], zoom_start=2)"
+                                    "value": "folium.Map(location=[avg_lat, avg_lon], zoom_start=4)"
                                 },
                                 {
                                     "type": "name",
@@ -7916,29 +8053,31 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "avg_lat"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "users"
-                                },
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "marker"
-                                    ],
-                                    "value": "folium.Marker([user['latitude'], user['longitude']], popup=f\"{user['first_name']} {user['last_name']}\", tooltip=user['email'])"
+                                    "id": "avg_lon"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "folium.Marker(location=data['location'], popup=data['name'], tooltip=data['email']).add_to",
+                                    "args": [
+                                        "m"
+                                    ]
                                 },
                                 {
                                     "type": "call",
                                     "function": "folium.Marker",
-                                    "args": [
-                                        "[user['latitude'], user['longitude']]"
-                                    ]
+                                    "args": []
                                 },
                                 {
                                     "type": "name",
@@ -7946,34 +8085,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "marker.add_to",
-                                    "args": [
-                                        "m"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
@@ -8279,9 +8399,146 @@
                                 {
                                     "type": "assignment",
                                     "targets": [
+                                        "map_data"
+                                    ],
+                                    "value": "[{'name': f\"{user['first_name']} {user['last_name']}\", 'location': [user['latitude'], user['longitude']], 'email': user['email']} for user in users]"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lat"
+                                    ],
+                                    "value": "sum((user['latitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lat"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['latitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lon"
+                                    ],
+                                    "value": "sum((user['longitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lon"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['longitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
                                         "m"
                                     ],
-                                    "value": "folium.Map(location=[0, 0], zoom_start=2)"
+                                    "value": "folium.Map(location=[avg_lat, avg_lon], zoom_start=4)"
                                 },
                                 {
                                     "type": "name",
@@ -8298,29 +8555,31 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "avg_lat"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "users"
-                                },
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "marker"
-                                    ],
-                                    "value": "folium.Marker([user['latitude'], user['longitude']], popup=f\"{user['first_name']} {user['last_name']}\", tooltip=user['email'])"
+                                    "id": "avg_lon"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "folium.Marker(location=data['location'], popup=data['name'], tooltip=data['email']).add_to",
+                                    "args": [
+                                        "m"
+                                    ]
                                 },
                                 {
                                     "type": "call",
                                     "function": "folium.Marker",
-                                    "args": [
-                                        "[user['latitude'], user['longitude']]"
-                                    ]
+                                    "args": []
                                 },
                                 {
                                     "type": "name",
@@ -8328,34 +8587,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "marker.add_to",
-                                    "args": [
-                                        "m"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
@@ -8665,9 +8905,146 @@
                                 {
                                     "type": "assignment",
                                     "targets": [
+                                        "map_data"
+                                    ],
+                                    "value": "[{'name': f\"{user['first_name']} {user['last_name']}\", 'location': [user['latitude'], user['longitude']], 'email': user['email']} for user in users]"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lat"
+                                    ],
+                                    "value": "sum((user['latitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lat"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['latitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lon"
+                                    ],
+                                    "value": "sum((user['longitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lon"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['longitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
                                         "m"
                                     ],
-                                    "value": "folium.Map(location=[0, 0], zoom_start=2)"
+                                    "value": "folium.Map(location=[avg_lat, avg_lon], zoom_start=4)"
                                 },
                                 {
                                     "type": "name",
@@ -8684,29 +9061,31 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "avg_lat"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "users"
-                                },
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "marker"
-                                    ],
-                                    "value": "folium.Marker([user['latitude'], user['longitude']], popup=f\"{user['first_name']} {user['last_name']}\", tooltip=user['email'])"
+                                    "id": "avg_lon"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "folium.Marker(location=data['location'], popup=data['name'], tooltip=data['email']).add_to",
+                                    "args": [
+                                        "m"
+                                    ]
                                 },
                                 {
                                     "type": "call",
                                     "function": "folium.Marker",
-                                    "args": [
-                                        "[user['latitude'], user['longitude']]"
-                                    ]
+                                    "args": []
                                 },
                                 {
                                     "type": "name",
@@ -8714,34 +9093,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "marker.add_to",
-                                    "args": [
-                                        "m"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
@@ -9047,9 +9407,146 @@
                                 {
                                     "type": "assignment",
                                     "targets": [
+                                        "map_data"
+                                    ],
+                                    "value": "[{'name': f\"{user['first_name']} {user['last_name']}\", 'location': [user['latitude'], user['longitude']], 'email': user['email']} for user in users]"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lat"
+                                    ],
+                                    "value": "sum((user['latitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lat"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['latitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "avg_lon"
+                                    ],
+                                    "value": "sum((user['longitude'] for user in users)) / len(users)"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "avg_lon"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "sum",
+                                    "args": [
+                                        "(user['longitude'] for user in users)"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "sum"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "user"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "len",
+                                    "args": [
+                                        "users"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "len"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "users"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
                                         "m"
                                     ],
-                                    "value": "folium.Map(location=[0, 0], zoom_start=2)"
+                                    "value": "folium.Map(location=[avg_lat, avg_lon], zoom_start=4)"
                                 },
                                 {
                                     "type": "name",
@@ -9066,29 +9563,31 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "avg_lat"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "users"
-                                },
-                                {
-                                    "type": "assignment",
-                                    "targets": [
-                                        "marker"
-                                    ],
-                                    "value": "folium.Marker([user['latitude'], user['longitude']], popup=f\"{user['first_name']} {user['last_name']}\", tooltip=user['email'])"
+                                    "id": "avg_lon"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "map_data"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "folium.Marker(location=data['location'], popup=data['name'], tooltip=data['email']).add_to",
+                                    "args": [
+                                        "m"
+                                    ]
                                 },
                                 {
                                     "type": "call",
                                     "function": "folium.Marker",
-                                    "args": [
-                                        "[user['latitude'], user['longitude']]"
-                                    ]
+                                    "args": []
                                 },
                                 {
                                     "type": "name",
@@ -9096,34 +9595,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "user"
-                                },
-                                {
-                                    "type": "call",
-                                    "function": "marker.add_to",
-                                    "args": [
-                                        "m"
-                                    ]
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "marker"
+                                    "id": "data"
                                 },
                                 {
                                     "type": "name",
