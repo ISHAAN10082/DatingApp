@@ -2,12 +2,21 @@
     "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py": [
         {
             "type": "module",
+            "name": "/home/hansal/DatingApp/.ipynb_checkpoints/db-checkpoint.py",
+            "children": []
+        }
+    ],
+    "/home/hansal/DatingApp/backend/__init__.py": [
+        {
+            "type": "module",
+            "name": "/home/hansal/DatingApp/backend/__init__.py",
             "children": []
         }
     ],
     "/home/hansal/DatingApp/conftest.py": [
         {
             "type": "module",
+            "name": "/home/hansal/DatingApp/conftest.py",
             "children": [
                 {
                     "type": "import",
@@ -124,9 +133,17 @@
             ]
         }
     ],
+    "/home/hansal/DatingApp/frontend/__init__.py": [
+        {
+            "type": "module",
+            "name": "/home/hansal/DatingApp/frontend/__init__.py",
+            "children": []
+        }
+    ],
     "/home/hansal/DatingApp/backend/schemas.py": [
         {
             "type": "module",
+            "name": "/home/hansal/DatingApp/backend/schemas.py",
             "children": [
                 {
                     "type": "import",
@@ -151,6 +168,7 @@
                 {
                     "type": "class",
                     "name": "UserBase",
+                    "full_path": "/home/hansal/DatingApp/backend/schemas.py.UserBase",
                     "children": [
                         {
                             "type": "name",
@@ -213,11 +231,13 @@
                             "id": "float"
                         }
                     ],
-                    "methods": []
+                    "methods": [],
+                    "source_code": "class UserBase(BaseModel):\n    uid: str\n    email: str\n    first_name: str\n    last_name: str\n    gender: str\n    latitude: float\n    longitude: float\n"
                 },
                 {
                     "type": "class",
                     "name": "UserBase",
+                    "full_path": "/home/hansal/DatingApp/backend/schemas.py.UserBase",
                     "children": [
                         {
                             "type": "name",
@@ -280,11 +300,13 @@
                             "id": "float"
                         }
                     ],
-                    "methods": []
+                    "methods": [],
+                    "source_code": "class UserBase(BaseModel):\n    uid: str\n    email: str\n    first_name: str\n    last_name: str\n    gender: str\n    latitude: float\n    longitude: float\n"
                 },
                 {
                     "type": "class",
                     "name": "User",
+                    "full_path": "/home/hansal/DatingApp/backend/schemas.py.User",
                     "children": [
                         {
                             "type": "name",
@@ -317,6 +339,7 @@
                         {
                             "type": "class",
                             "name": "Config",
+                            "full_path": "/home/hansal/DatingApp/backend/schemas.py.User.Config",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -330,11 +353,13 @@
                                     "id": "from_attributes"
                                 }
                             ],
-                            "methods": []
+                            "methods": [],
+                            "source_code": "class Config:\n    from_attributes = True\n"
                         },
                         {
                             "type": "class",
                             "name": "Config",
+                            "full_path": "/home/hansal/DatingApp/backend/schemas.py.User.Config",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -348,14 +373,17 @@
                                     "id": "from_attributes"
                                 }
                             ],
-                            "methods": []
+                            "methods": [],
+                            "source_code": "class Config:\n    from_attributes = True\n"
                         }
                     ],
-                    "methods": []
+                    "methods": [],
+                    "source_code": "class User(UserBase):\n    run_id: str\n    run_iteration: int\n    datetime: datetime\n\n\n    class Config:\n        from_attributes = True\n"
                 },
                 {
                     "type": "class",
                     "name": "User",
+                    "full_path": "/home/hansal/DatingApp/backend/schemas.py.User",
                     "children": [
                         {
                             "type": "name",
@@ -388,6 +416,7 @@
                         {
                             "type": "class",
                             "name": "Config",
+                            "full_path": "/home/hansal/DatingApp/backend/schemas.py.User.Config",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -401,11 +430,13 @@
                                     "id": "from_attributes"
                                 }
                             ],
-                            "methods": []
+                            "methods": [],
+                            "source_code": "class Config:\n    from_attributes = True\n"
                         },
                         {
                             "type": "class",
                             "name": "Config",
+                            "full_path": "/home/hansal/DatingApp/backend/schemas.py.User.Config",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -419,14 +450,17 @@
                                     "id": "from_attributes"
                                 }
                             ],
-                            "methods": []
+                            "methods": [],
+                            "source_code": "class Config:\n    from_attributes = True\n"
                         }
                     ],
-                    "methods": []
+                    "methods": [],
+                    "source_code": "class User(UserBase):\n    run_id: str\n    run_iteration: int\n    datetime: datetime\n\n\n    class Config:\n        from_attributes = True\n"
                 },
                 {
                     "type": "class",
                     "name": "Message",
+                    "full_path": "/home/hansal/DatingApp/backend/schemas.py.Message",
                     "children": [
                         {
                             "type": "name",
@@ -449,11 +483,13 @@
                             "id": "str"
                         }
                     ],
-                    "methods": []
+                    "methods": [],
+                    "source_code": "class Message(BaseModel):\n    message: str\n    run_id: str\n"
                 },
                 {
                     "type": "class",
                     "name": "Message",
+                    "full_path": "/home/hansal/DatingApp/backend/schemas.py.Message",
                     "children": [
                         {
                             "type": "name",
@@ -476,26 +512,16 @@
                             "id": "str"
                         }
                     ],
-                    "methods": []
+                    "methods": [],
+                    "source_code": "class Message(BaseModel):\n    message: str\n    run_id: str\n"
                 }
             ]
-        }
-    ],
-    "/home/hansal/DatingApp/frontend/__init__.py": [
-        {
-            "type": "module",
-            "children": []
-        }
-    ],
-    "/home/hansal/DatingApp/backend/__init__.py": [
-        {
-            "type": "module",
-            "children": []
         }
     ],
     "/home/hansal/DatingApp/backend/database.py": [
         {
             "type": "module",
+            "name": "/home/hansal/DatingApp/backend/database.py",
             "children": [
                 {
                     "type": "import",
@@ -611,65 +637,44 @@
             ]
         }
     ],
-    "/home/hansal/DatingApp/backend/crud.py": [
+    "/home/hansal/DatingApp/backend/models.py": [
         {
             "type": "module",
+            "name": "/home/hansal/DatingApp/backend/models.py",
             "children": [
                 {
                     "type": "import",
-                    "module": "sqlalchemy.orm",
+                    "module": "sqlalchemy",
                     "names": [
                         {
-                            "module": "Session",
-                            "alias": "Session"
+                            "module": "Column",
+                            "alias": "Column"
+                        },
+                        {
+                            "module": "Integer",
+                            "alias": "Integer"
+                        },
+                        {
+                            "module": "String",
+                            "alias": "String"
+                        },
+                        {
+                            "module": "Float",
+                            "alias": "Float"
+                        },
+                        {
+                            "module": "DateTime",
+                            "alias": "DateTime"
                         }
                     ]
                 },
                 {
                     "type": "import",
-                    "module": "sqlalchemy.sql.expression",
+                    "module": "sqlalchemy.ext.declarative",
                     "names": [
                         {
-                            "module": "func",
-                            "alias": "func"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "backend",
-                    "names": [
-                        {
-                            "module": "models",
-                            "alias": "models"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "requests",
-                            "alias": "requests"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "names": [
-                        {
-                            "module": "uuid",
-                            "alias": "uuid"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "geopy.distance",
-                    "names": [
-                        {
-                            "module": "geodesic",
-                            "alias": "geodesic"
+                            "module": "declarative_base",
+                            "alias": "declarative_base"
                         }
                     ]
                 },
@@ -684,1308 +689,652 @@
                     ]
                 },
                 {
-                    "type": "function",
-                    "name": "fetch_and_store_users",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "str(uuid.uuid4())"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "str",
-                            "args": [
-                                "uuid.uuid4()"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "call",
-                            "function": "uuid.uuid4",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "uuid"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_datetime"
-                            ],
-                            "value": "datetime.utcnow()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "datetime.utcnow",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "users_to_add"
-                            ],
-                            "value": "[]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "call",
-                            "function": "range",
-                            "args": [
-                                "num_users"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "range"
-                        },
-                        {
-                            "type": "name",
-                            "id": "num_users"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "response"
-                            ],
-                            "value": "requests.get('https://randomuser.me/api/')"
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "call",
-                            "function": "requests.get",
-                            "args": [
-                                "'https://randomuser.me/api/'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.raise_for_status",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "data"
-                            ],
-                            "value": "response.json()['results'][0]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.json",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "print",
-                            "args": [
-                                "f'An error occurred while fetching user data: {e}'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "print"
-                        },
-                        {
-                            "type": "name",
-                            "id": "e"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "user"
-                            ],
-                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "models.User",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['latitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['longitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "users_to_add.append",
-                            "args": [
-                                "user"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.add_all",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.commit",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "total_users"
-                            ],
-                            "value": "db.query(models.User).count()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).count",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "len",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "len"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        }
-                    ]
+                    "type": "assignment",
+                    "targets": [
+                        "Base"
+                    ],
+                    "value": "declarative_base()"
                 },
                 {
-                    "type": "function",
-                    "name": "fetch_and_store_users",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "str(uuid.uuid4())"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "str",
-                            "args": [
-                                "uuid.uuid4()"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "call",
-                            "function": "uuid.uuid4",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "uuid"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_datetime"
-                            ],
-                            "value": "datetime.utcnow()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "datetime.utcnow",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "users_to_add"
-                            ],
-                            "value": "[]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "call",
-                            "function": "range",
-                            "args": [
-                                "num_users"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "range"
-                        },
-                        {
-                            "type": "name",
-                            "id": "num_users"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "response"
-                            ],
-                            "value": "requests.get('https://randomuser.me/api/')"
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "call",
-                            "function": "requests.get",
-                            "args": [
-                                "'https://randomuser.me/api/'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.raise_for_status",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "data"
-                            ],
-                            "value": "response.json()['results'][0]"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "response.json",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "response"
-                        },
-                        {
-                            "type": "name",
-                            "id": "requests"
-                        },
-                        {
-                            "type": "call",
-                            "function": "print",
-                            "args": [
-                                "f'An error occurred while fetching user data: {e}'"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "print"
-                        },
-                        {
-                            "type": "name",
-                            "id": "e"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "user"
-                            ],
-                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "models.User",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['latitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "call",
-                            "function": "float",
-                            "args": [
-                                "data['location']['coordinates']['longitude']"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "float"
-                        },
-                        {
-                            "type": "name",
-                            "id": "data"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "name",
-                            "id": "i"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "users_to_add.append",
-                            "args": [
-                                "user"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.add_all",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.commit",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "total_users"
-                            ],
-                            "value": "db.query(models.User).count()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).count",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "len",
-                            "args": [
-                                "users_to_add"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "len"
-                        },
-                        {
-                            "type": "name",
-                            "id": "users_to_add"
-                        },
-                        {
-                            "type": "name",
-                            "id": "total_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        }
-                    ]
+                    "type": "name",
+                    "id": "Base"
                 },
                 {
-                    "type": "function",
-                    "name": "get_random_user",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by(func.random()).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by",
-                            "args": [
-                                "func.random()"
-                            ]
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "func.random",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "func"
-                        }
-                    ]
+                    "type": "call",
+                    "function": "declarative_base",
+                    "args": []
                 },
                 {
-                    "type": "function",
-                    "name": "get_random_user",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by(func.random()).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).order_by",
-                            "args": [
-                                "func.random()"
-                            ]
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "call",
-                            "function": "func.random",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "func"
-                        }
-                    ]
+                    "type": "name",
+                    "id": "declarative_base"
                 },
                 {
-                    "type": "function",
-                    "name": "get_random_username",
+                    "type": "class",
+                    "name": "User",
+                    "full_path": "/home/hansal/DatingApp/backend/models.py.User",
                     "children": [
                         {
                             "type": "name",
-                            "id": "Session"
+                            "id": "Base"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "random_user"
+                                "__tablename__"
                             ],
-                            "value": "get_random_user(db)"
+                            "value": "'users'"
                         },
                         {
                             "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "get_random_user",
-                            "args": [
-                                "db"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "get_random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_random_username",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
+                            "id": "__tablename__"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "random_user"
+                                "uid"
                             ],
-                            "value": "get_random_user(db)"
+                            "value": "Column(String, unique=True, primary_key=True, index=True)"
                         },
                         {
                             "type": "name",
-                            "id": "random_user"
+                            "id": "uid"
                         },
                         {
                             "type": "call",
-                            "function": "get_random_user",
+                            "function": "Column",
                             "args": [
-                                "db"
+                                "String"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "get_random_user"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "random_user"
-                        }
-                    ]
-                },
-                {
-                    "type": "function",
-                    "name": "get_nearest_users",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
+                            "id": "String"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "user"
+                                "email"
                             ],
-                            "value": "db.query(models.User).filter(models.User.email == email).first()"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).filter(models.User.email == email).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).filter",
-                            "args": [
-                                "models.User.email == email"
-                            ]
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "db"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
+                            "value": "Column(String, unique=True, index=True)"
                         },
                         {
                             "type": "name",
                             "id": "email"
                         },
                         {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
                             "type": "name",
-                            "id": "user"
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "all_users"
+                                "first_name"
                             ],
-                            "value": "db.query(models.User).all()"
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "all_users"
+                            "id": "first_name"
                         },
                         {
                             "type": "call",
-                            "function": "db.query(models.User).all",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
+                            "function": "Column",
                             "args": [
-                                "models.User"
+                                "String"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "db"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "models"
+                            "id": "String"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "distances"
+                                "phone_number"
                             ],
-                            "value": "[]"
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "distances"
+                            "id": "phone_number"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
                         },
                         {
                             "type": "name",
-                            "id": "other_user"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "all_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
+                            "id": "String"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "distance"
+                                "last_name"
                             ],
-                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "distance"
+                            "id": "last_name"
                         },
                         {
                             "type": "call",
-                            "function": "geodesic",
+                            "function": "Column",
                             "args": [
-                                "(user.latitude, user.longitude)",
-                                "(other_user.latitude, other_user.longitude)"
+                                "String"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "geodesic"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "user"
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "gender"
+                            ],
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
+                            "id": "gender"
                         },
                         {
                             "type": "call",
-                            "function": "distances.append",
+                            "function": "Column",
                             "args": [
-                                "(other_user, distance)"
+                                "String"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "distances"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "other_user"
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "latitude"
+                            ],
+                            "value": "Column(Float)"
                         },
                         {
                             "type": "name",
-                            "id": "distance"
+                            "id": "latitude"
                         },
                         {
                             "type": "call",
-                            "function": "distances.sort",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "lambda",
-                            "children": [
-                                {
-                                    "type": "name",
-                                    "id": "x"
-                                }
+                            "function": "Column",
+                            "args": [
+                                "Float"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "u"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "u"
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "longitude"
+                            ],
+                            "value": "Column(Float)"
                         },
                         {
                             "type": "name",
-                            "id": "distances"
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
                         },
                         {
                             "type": "name",
-                            "id": "x"
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "Column(String, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_iteration"
+                            ],
+                            "value": "Column(Integer)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Integer"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Integer"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "datetime"
+                            ],
+                            "value": "Column(DateTime, default=datetime.utcnow)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "DateTime"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "DateTime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
                         }
-                    ]
+                    ],
+                    "methods": [],
+                    "source_code": "class User(Base):\n    __tablename__ = 'users'\n    uid = Column(String, unique=True, primary_key=True, index=True)\n    email = Column(String, unique=True, index=True)\n    first_name = Column(String)\n    phone_number = Column(String)\n    last_name = Column(String)\n    gender = Column(String)\n    latitude = Column(Float)\n    longitude = Column(Float)\n    run_id = Column(String, index=True)\n    run_iteration = Column(Integer)\n    datetime = Column(DateTime, default=datetime.utcnow)\n"
                 },
                 {
-                    "type": "function",
-                    "name": "get_nearest_users",
+                    "type": "class",
+                    "name": "User",
+                    "full_path": "/home/hansal/DatingApp/backend/models.py.User",
                     "children": [
                         {
                             "type": "name",
-                            "id": "Session"
-                        },
-                        {
-                            "type": "name",
-                            "id": "str"
-                        },
-                        {
-                            "type": "name",
-                            "id": "int"
+                            "id": "Base"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "user"
+                                "__tablename__"
                             ],
-                            "value": "db.query(models.User).filter(models.User.email == email).first()"
+                            "value": "'users'"
                         },
                         {
                             "type": "name",
-                            "id": "user"
+                            "id": "__tablename__"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "uid"
+                            ],
+                            "value": "Column(String, unique=True, primary_key=True, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "uid"
                         },
                         {
                             "type": "call",
-                            "function": "db.query(models.User).filter(models.User.email == email).first",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query(models.User).filter",
+                            "function": "Column",
                             "args": [
-                                "models.User.email == email"
+                                "String"
                             ]
                         },
                         {
-                            "type": "call",
-                            "function": "db.query",
-                            "args": [
-                                "models.User"
-                            ]
+                            "type": "name",
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "db"
+                            "id": "String"
                         },
                         {
-                            "type": "name",
-                            "id": "models"
-                        },
-                        {
-                            "type": "name",
-                            "id": "models"
+                            "type": "assignment",
+                            "targets": [
+                                "email"
+                            ],
+                            "value": "Column(String, unique=True, index=True)"
                         },
                         {
                             "type": "name",
                             "id": "email"
                         },
                         {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
                             "type": "name",
-                            "id": "user"
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "all_users"
+                                "first_name"
                             ],
-                            "value": "db.query(models.User).all()"
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "all_users"
+                            "id": "first_name"
                         },
                         {
                             "type": "call",
-                            "function": "db.query(models.User).all",
-                            "args": []
-                        },
-                        {
-                            "type": "call",
-                            "function": "db.query",
+                            "function": "Column",
                             "args": [
-                                "models.User"
+                                "String"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "db"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "models"
+                            "id": "String"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "distances"
+                                "phone_number"
                             ],
-                            "value": "[]"
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "distances"
+                            "id": "phone_number"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
                         },
                         {
                             "type": "name",
-                            "id": "other_user"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "all_users"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "user"
+                            "id": "String"
                         },
                         {
                             "type": "assignment",
                             "targets": [
-                                "distance"
+                                "last_name"
                             ],
-                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "distance"
+                            "id": "last_name"
                         },
                         {
                             "type": "call",
-                            "function": "geodesic",
+                            "function": "Column",
                             "args": [
-                                "(user.latitude, user.longitude)",
-                                "(other_user.latitude, other_user.longitude)"
+                                "String"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "geodesic"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "user"
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "gender"
+                            ],
+                            "value": "Column(String)"
                         },
                         {
                             "type": "name",
-                            "id": "user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
-                        },
-                        {
-                            "type": "name",
-                            "id": "other_user"
+                            "id": "gender"
                         },
                         {
                             "type": "call",
-                            "function": "distances.append",
+                            "function": "Column",
                             "args": [
-                                "(other_user, distance)"
+                                "String"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "distances"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "other_user"
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "latitude"
+                            ],
+                            "value": "Column(Float)"
                         },
                         {
                             "type": "name",
-                            "id": "distance"
+                            "id": "latitude"
                         },
                         {
                             "type": "call",
-                            "function": "distances.sort",
-                            "args": []
-                        },
-                        {
-                            "type": "name",
-                            "id": "distances"
-                        },
-                        {
-                            "type": "lambda",
-                            "children": [
-                                {
-                                    "type": "name",
-                                    "id": "x"
-                                }
+                            "function": "Column",
+                            "args": [
+                                "Float"
                             ]
                         },
                         {
                             "type": "name",
-                            "id": "u"
+                            "id": "Column"
                         },
                         {
                             "type": "name",
-                            "id": "u"
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "longitude"
+                            ],
+                            "value": "Column(Float)"
                         },
                         {
                             "type": "name",
-                            "id": "distances"
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Float"
+                            ]
                         },
                         {
                             "type": "name",
-                            "id": "x"
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "Column(String, index=True)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "String"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "String"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_iteration"
+                            ],
+                            "value": "Column(Integer)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_iteration"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "Integer"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "Integer"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "datetime"
+                            ],
+                            "value": "Column(DateTime, default=datetime.utcnow)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "Column",
+                            "args": [
+                                "DateTime"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "Column"
+                        },
+                        {
+                            "type": "name",
+                            "id": "DateTime"
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
                         }
-                    ]
+                    ],
+                    "methods": [],
+                    "source_code": "class User(Base):\n    __tablename__ = 'users'\n    uid = Column(String, unique=True, primary_key=True, index=True)\n    email = Column(String, unique=True, index=True)\n    first_name = Column(String)\n    phone_number = Column(String)\n    last_name = Column(String)\n    gender = Column(String)\n    latitude = Column(Float)\n    longitude = Column(Float)\n    run_id = Column(String, index=True)\n    run_iteration = Column(Integer)\n    datetime = Column(DateTime, default=datetime.utcnow)\n"
                 }
             ]
         }
@@ -1993,6 +1342,7 @@
     "/home/hansal/DatingApp/backend/main.py": [
         {
             "type": "module",
+            "name": "/home/hansal/DatingApp/backend/main.py",
             "children": [
                 {
                     "type": "import",
@@ -2213,6 +1563,7 @@
                 {
                     "type": "function",
                     "name": "get_db",
+                    "full_path": "/home/hansal/DatingApp/backend/main.py.get_db",
                     "children": [
                         {
                             "type": "assignment",
@@ -2247,11 +1598,13 @@
                             "type": "name",
                             "id": "db"
                         }
-                    ]
+                    ],
+                    "source_code": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n"
                 },
                 {
                     "type": "function",
                     "name": "get_db",
+                    "full_path": "/home/hansal/DatingApp/backend/main.py.get_db",
                     "children": [
                         {
                             "type": "assignment",
@@ -2286,7 +1639,8 @@
                             "type": "name",
                             "id": "db"
                         }
-                    ]
+                    ],
+                    "source_code": "def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()\n"
                 },
                 {
                     "type": "name",
@@ -2735,706 +2089,10 @@
             ]
         }
     ],
-    "/home/hansal/DatingApp/backend/models.py": [
-        {
-            "type": "module",
-            "children": [
-                {
-                    "type": "import",
-                    "module": "sqlalchemy",
-                    "names": [
-                        {
-                            "module": "Column",
-                            "alias": "Column"
-                        },
-                        {
-                            "module": "Integer",
-                            "alias": "Integer"
-                        },
-                        {
-                            "module": "String",
-                            "alias": "String"
-                        },
-                        {
-                            "module": "Float",
-                            "alias": "Float"
-                        },
-                        {
-                            "module": "DateTime",
-                            "alias": "DateTime"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "sqlalchemy.ext.declarative",
-                    "names": [
-                        {
-                            "module": "declarative_base",
-                            "alias": "declarative_base"
-                        }
-                    ]
-                },
-                {
-                    "type": "import",
-                    "module": "datetime",
-                    "names": [
-                        {
-                            "module": "datetime",
-                            "alias": "datetime"
-                        }
-                    ]
-                },
-                {
-                    "type": "assignment",
-                    "targets": [
-                        "Base"
-                    ],
-                    "value": "declarative_base()"
-                },
-                {
-                    "type": "name",
-                    "id": "Base"
-                },
-                {
-                    "type": "call",
-                    "function": "declarative_base",
-                    "args": []
-                },
-                {
-                    "type": "name",
-                    "id": "declarative_base"
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Base"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "__tablename__"
-                            ],
-                            "value": "'users'"
-                        },
-                        {
-                            "type": "name",
-                            "id": "__tablename__"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "uid"
-                            ],
-                            "value": "Column(String, unique=True, primary_key=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "email"
-                            ],
-                            "value": "Column(String, unique=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "first_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "phone_number"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "phone_number"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "last_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "gender"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "latitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "longitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "Column(String, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_iteration"
-                            ],
-                            "value": "Column(Integer)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Integer"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Integer"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "datetime"
-                            ],
-                            "value": "Column(DateTime, default=datetime.utcnow)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "DateTime"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "DateTime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        }
-                    ],
-                    "methods": []
-                },
-                {
-                    "type": "class",
-                    "name": "User",
-                    "children": [
-                        {
-                            "type": "name",
-                            "id": "Base"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "__tablename__"
-                            ],
-                            "value": "'users'"
-                        },
-                        {
-                            "type": "name",
-                            "id": "__tablename__"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "uid"
-                            ],
-                            "value": "Column(String, unique=True, primary_key=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "uid"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "email"
-                            ],
-                            "value": "Column(String, unique=True, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "email"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "first_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "first_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "phone_number"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "phone_number"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "last_name"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "last_name"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "gender"
-                            ],
-                            "value": "Column(String)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "gender"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "latitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "latitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "longitude"
-                            ],
-                            "value": "Column(Float)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "longitude"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Float"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Float"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_id"
-                            ],
-                            "value": "Column(String, index=True)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_id"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "String"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "String"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "run_iteration"
-                            ],
-                            "value": "Column(Integer)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "run_iteration"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "Integer"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "Integer"
-                        },
-                        {
-                            "type": "assignment",
-                            "targets": [
-                                "datetime"
-                            ],
-                            "value": "Column(DateTime, default=datetime.utcnow)"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        },
-                        {
-                            "type": "call",
-                            "function": "Column",
-                            "args": [
-                                "DateTime"
-                            ]
-                        },
-                        {
-                            "type": "name",
-                            "id": "Column"
-                        },
-                        {
-                            "type": "name",
-                            "id": "DateTime"
-                        },
-                        {
-                            "type": "name",
-                            "id": "datetime"
-                        }
-                    ],
-                    "methods": []
-                }
-            ]
-        }
-    ],
     "/home/hansal/DatingApp/frontend/app.py": [
         {
             "type": "module",
+            "name": "/home/hansal/DatingApp/frontend/app.py",
             "children": [
                 {
                     "type": "import",
@@ -3525,6 +2183,7 @@
                 {
                     "type": "function",
                     "name": "make_request",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.make_request",
                     "children": [
                         {
                             "type": "assignment",
@@ -3602,11 +2261,13 @@
                             "type": "name",
                             "id": "e"
                         }
-                    ]
+                    ],
+                    "source_code": "def make_request(method, endpoint, **kwargs):\n    try:\n        response = requests.request(method, f'{BACKEND_URL}{endpoint}', **\n            kwargs)\n        response.raise_for_status()\n        return response.json()\n    except requests.exceptions.RequestException as e:\n        st.error(f'An error occurred: {e}')\n        return None\n"
                 },
                 {
                     "type": "function",
                     "name": "make_request",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.make_request",
                     "children": [
                         {
                             "type": "assignment",
@@ -3684,7 +2345,8 @@
                             "type": "name",
                             "id": "e"
                         }
-                    ]
+                    ],
+                    "source_code": "def make_request(method, endpoint, **kwargs):\n    try:\n        response = requests.request(method, f'{BACKEND_URL}{endpoint}', **\n            kwargs)\n        response.raise_for_status()\n        return response.json()\n    except requests.exceptions.RequestException as e:\n        st.error(f'An error occurred: {e}')\n        return None\n"
                 },
                 {
                     "type": "assignment",
@@ -4363,10 +3025,12 @@
                 {
                     "type": "class",
                     "name": "UserManager",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager",
                     "children": [
                         {
                             "type": "method",
                             "name": "fetch_and_store_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.fetch_and_store_users",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -4433,11 +3097,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef fetch_and_store_users(num_users):\n    result = make_request('POST', '/users/', json={'num_users': num_users})\n    if result:\n        st.success(result['message'])\n        st.info(f\"Run ID: {result['run_id']}\")\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_user",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_user",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -4634,11 +3300,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_user():\n    user = make_request('GET', '/random_user/')\n    if user:\n        st.write(f\"Name: {user['first_name']} {user['last_name']}\")\n        st.write(f\"Email: {user['email']}\")\n        st.write(f\"Gender: {user['gender']}\")\n        st.write(f\"UID: {user['uid']}\")\n        st.write(f\"Ingestion Date: {user['datetime']}\")\n        m = folium.Map(location=[user['latitude'], user['longitude']],\n            zoom_start=10)\n        folium.Marker([user['latitude'], user['longitude']], popup=\n            f\"{user['first_name']} {user['last_name']}\", tooltip=user['email']\n            ).add_to(m)\n        folium_static(m)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_username",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_username",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -4686,11 +3354,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_username():\n    username = make_request('GET', '/random_username/')\n    if username:\n        st.success(f'Random Username: {username}')\n"
                         },
                         {
                             "type": "method",
                             "name": "find_nearest_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.find_nearest_users",
                             "children": [
                                 {
                                     "type": "name",
@@ -4866,13 +3536,15 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef find_nearest_users(email, x):\n    if not email or '@' not in email:\n        st.error('Please enter a valid email address')\n    else:\n        users = make_request('GET', '/nearest_users/', params={'email':\n            email, 'x': x})\n        if users:\n            m = folium.Map(location=[users[0]['latitude'], users[0][\n                'longitude']], zoom_start=10)\n            for user in users:\n                st.write(\n                    f\"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}\"\n                    )\n                folium.Marker([user['latitude'], user['longitude']], popup=\n                    f\"{user['first_name']} {user['last_name']}\", tooltip=\n                    user['email']).add_to(m)\n            folium_static(m)\n"
                         }
                     ],
                     "methods": [
                         {
                             "type": "method",
                             "name": "fetch_and_store_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.fetch_and_store_users",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -4939,11 +3611,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef fetch_and_store_users(num_users):\n    result = make_request('POST', '/users/', json={'num_users': num_users})\n    if result:\n        st.success(result['message'])\n        st.info(f\"Run ID: {result['run_id']}\")\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_user",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_user",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -5140,11 +3814,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_user():\n    user = make_request('GET', '/random_user/')\n    if user:\n        st.write(f\"Name: {user['first_name']} {user['last_name']}\")\n        st.write(f\"Email: {user['email']}\")\n        st.write(f\"Gender: {user['gender']}\")\n        st.write(f\"UID: {user['uid']}\")\n        st.write(f\"Ingestion Date: {user['datetime']}\")\n        m = folium.Map(location=[user['latitude'], user['longitude']],\n            zoom_start=10)\n        folium.Marker([user['latitude'], user['longitude']], popup=\n            f\"{user['first_name']} {user['last_name']}\", tooltip=user['email']\n            ).add_to(m)\n        folium_static(m)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_username",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_username",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -5192,11 +3868,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_username():\n    username = make_request('GET', '/random_username/')\n    if username:\n        st.success(f'Random Username: {username}')\n"
                         },
                         {
                             "type": "method",
                             "name": "find_nearest_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.find_nearest_users",
                             "children": [
                                 {
                                     "type": "name",
@@ -5372,17 +4050,21 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef find_nearest_users(email, x):\n    if not email or '@' not in email:\n        st.error('Please enter a valid email address')\n    else:\n        users = make_request('GET', '/nearest_users/', params={'email':\n            email, 'x': x})\n        if users:\n            m = folium.Map(location=[users[0]['latitude'], users[0][\n                'longitude']], zoom_start=10)\n            for user in users:\n                st.write(\n                    f\"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}\"\n                    )\n                folium.Marker([user['latitude'], user['longitude']], popup=\n                    f\"{user['first_name']} {user['last_name']}\", tooltip=\n                    user['email']).add_to(m)\n            folium_static(m)\n"
                         }
-                    ]
+                    ],
+                    "source_code": "class UserManager:\n\n    @staticmethod\n    def fetch_and_store_users(num_users):\n        result = make_request('POST', '/users/', json={'num_users': num_users})\n        if result:\n            st.success(result['message'])\n            st.info(f\"Run ID: {result['run_id']}\")\n\n    @staticmethod\n    def get_random_user():\n        user = make_request('GET', '/random_user/')\n        if user:\n            st.write(f\"Name: {user['first_name']} {user['last_name']}\")\n            st.write(f\"Email: {user['email']}\")\n            st.write(f\"Gender: {user['gender']}\")\n            st.write(f\"UID: {user['uid']}\")\n            st.write(f\"Ingestion Date: {user['datetime']}\")\n            m = folium.Map(location=[user['latitude'], user['longitude']],\n                zoom_start=10)\n            folium.Marker([user['latitude'], user['longitude']], popup=\n                f\"{user['first_name']} {user['last_name']}\", tooltip=user[\n                'email']).add_to(m)\n            folium_static(m)\n\n    @staticmethod\n    def get_random_username():\n        username = make_request('GET', '/random_username/')\n        if username:\n            st.success(f'Random Username: {username}')\n\n    @staticmethod\n    def find_nearest_users(email, x):\n        if not email or '@' not in email:\n            st.error('Please enter a valid email address')\n        else:\n            users = make_request('GET', '/nearest_users/', params={'email':\n                email, 'x': x})\n            if users:\n                m = folium.Map(location=[users[0]['latitude'], users[0][\n                    'longitude']], zoom_start=10)\n                for user in users:\n                    st.write(\n                        f\"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}\"\n                        )\n                    folium.Marker([user['latitude'], user['longitude']],\n                        popup=f\"{user['first_name']} {user['last_name']}\",\n                        tooltip=user['email']).add_to(m)\n                folium_static(m)\n"
                 },
                 {
                     "type": "class",
                     "name": "UserManager",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager",
                     "children": [
                         {
                             "type": "method",
                             "name": "fetch_and_store_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.fetch_and_store_users",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -5449,11 +4131,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef fetch_and_store_users(num_users):\n    result = make_request('POST', '/users/', json={'num_users': num_users})\n    if result:\n        st.success(result['message'])\n        st.info(f\"Run ID: {result['run_id']}\")\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_user",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_user",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -5650,11 +4334,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_user():\n    user = make_request('GET', '/random_user/')\n    if user:\n        st.write(f\"Name: {user['first_name']} {user['last_name']}\")\n        st.write(f\"Email: {user['email']}\")\n        st.write(f\"Gender: {user['gender']}\")\n        st.write(f\"UID: {user['uid']}\")\n        st.write(f\"Ingestion Date: {user['datetime']}\")\n        m = folium.Map(location=[user['latitude'], user['longitude']],\n            zoom_start=10)\n        folium.Marker([user['latitude'], user['longitude']], popup=\n            f\"{user['first_name']} {user['last_name']}\", tooltip=user['email']\n            ).add_to(m)\n        folium_static(m)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_username",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_username",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -5702,11 +4388,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_username():\n    username = make_request('GET', '/random_username/')\n    if username:\n        st.success(f'Random Username: {username}')\n"
                         },
                         {
                             "type": "method",
                             "name": "find_nearest_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.find_nearest_users",
                             "children": [
                                 {
                                     "type": "name",
@@ -5882,13 +4570,15 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef find_nearest_users(email, x):\n    if not email or '@' not in email:\n        st.error('Please enter a valid email address')\n    else:\n        users = make_request('GET', '/nearest_users/', params={'email':\n            email, 'x': x})\n        if users:\n            m = folium.Map(location=[users[0]['latitude'], users[0][\n                'longitude']], zoom_start=10)\n            for user in users:\n                st.write(\n                    f\"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}\"\n                    )\n                folium.Marker([user['latitude'], user['longitude']], popup=\n                    f\"{user['first_name']} {user['last_name']}\", tooltip=\n                    user['email']).add_to(m)\n            folium_static(m)\n"
                         }
                     ],
                     "methods": [
                         {
                             "type": "method",
                             "name": "fetch_and_store_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.fetch_and_store_users",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -5955,11 +4645,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef fetch_and_store_users(num_users):\n    result = make_request('POST', '/users/', json={'num_users': num_users})\n    if result:\n        st.success(result['message'])\n        st.info(f\"Run ID: {result['run_id']}\")\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_user",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_user",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -6156,11 +4848,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_user():\n    user = make_request('GET', '/random_user/')\n    if user:\n        st.write(f\"Name: {user['first_name']} {user['last_name']}\")\n        st.write(f\"Email: {user['email']}\")\n        st.write(f\"Gender: {user['gender']}\")\n        st.write(f\"UID: {user['uid']}\")\n        st.write(f\"Ingestion Date: {user['datetime']}\")\n        m = folium.Map(location=[user['latitude'], user['longitude']],\n            zoom_start=10)\n        folium.Marker([user['latitude'], user['longitude']], popup=\n            f\"{user['first_name']} {user['last_name']}\", tooltip=user['email']\n            ).add_to(m)\n        folium_static(m)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_random_username",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.get_random_username",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -6208,11 +4902,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_random_username():\n    username = make_request('GET', '/random_username/')\n    if username:\n        st.success(f'Random Username: {username}')\n"
                         },
                         {
                             "type": "method",
                             "name": "find_nearest_users",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserManager.find_nearest_users",
                             "children": [
                                 {
                                     "type": "name",
@@ -6388,28 +5084,32 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef find_nearest_users(email, x):\n    if not email or '@' not in email:\n        st.error('Please enter a valid email address')\n    else:\n        users = make_request('GET', '/nearest_users/', params={'email':\n            email, 'x': x})\n        if users:\n            m = folium.Map(location=[users[0]['latitude'], users[0][\n                'longitude']], zoom_start=10)\n            for user in users:\n                st.write(\n                    f\"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}\"\n                    )\n                folium.Marker([user['latitude'], user['longitude']], popup=\n                    f\"{user['first_name']} {user['last_name']}\", tooltip=\n                    user['email']).add_to(m)\n            folium_static(m)\n"
                         }
-                    ]
+                    ],
+                    "source_code": "class UserManager:\n\n    @staticmethod\n    def fetch_and_store_users(num_users):\n        result = make_request('POST', '/users/', json={'num_users': num_users})\n        if result:\n            st.success(result['message'])\n            st.info(f\"Run ID: {result['run_id']}\")\n\n    @staticmethod\n    def get_random_user():\n        user = make_request('GET', '/random_user/')\n        if user:\n            st.write(f\"Name: {user['first_name']} {user['last_name']}\")\n            st.write(f\"Email: {user['email']}\")\n            st.write(f\"Gender: {user['gender']}\")\n            st.write(f\"UID: {user['uid']}\")\n            st.write(f\"Ingestion Date: {user['datetime']}\")\n            m = folium.Map(location=[user['latitude'], user['longitude']],\n                zoom_start=10)\n            folium.Marker([user['latitude'], user['longitude']], popup=\n                f\"{user['first_name']} {user['last_name']}\", tooltip=user[\n                'email']).add_to(m)\n            folium_static(m)\n\n    @staticmethod\n    def get_random_username():\n        username = make_request('GET', '/random_username/')\n        if username:\n            st.success(f'Random Username: {username}')\n\n    @staticmethod\n    def find_nearest_users(email, x):\n        if not email or '@' not in email:\n            st.error('Please enter a valid email address')\n        else:\n            users = make_request('GET', '/nearest_users/', params={'email':\n                email, 'x': x})\n            if users:\n                m = folium.Map(location=[users[0]['latitude'], users[0][\n                    'longitude']], zoom_start=10)\n                for user in users:\n                    st.write(\n                        f\"Name: {user['first_name']} {user['last_name']}, Email: {user['email']}\"\n                        )\n                    folium.Marker([user['latitude'], user['longitude']],\n                        popup=f\"{user['first_name']} {user['last_name']}\",\n                        tooltip=user['email']).add_to(m)\n                folium_static(m)\n"
                 },
                 {
                     "type": "class",
                     "name": "UserAnalytics",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics",
                     "children": [
                         {
                             "type": "method",
                             "name": "get_user_count",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_user_count",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "response"
                                     ],
                                     "value": "make_request('GET', '/user_count/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
@@ -6425,14 +5125,24 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.metric",
+                                    "function": "st.write",
                                     "args": [
-                                        "'Total Users'",
-                                        "count"
+                                        "'### User Count Overview'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'**Total Users:** {response}'"
                                     ]
                                 },
                                 {
@@ -6441,13 +5151,44 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "growth_data"
+                                    ],
+                                    "value": "{'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'], 'User Count': [response - 5, response - 3, response, response + 2, response + 5]}"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "growth_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.bar_chart",
+                                    "function": "st.line_chart",
                                     "args": [
-                                        "{'Users': count}"
+                                        "growth_data"
                                     ]
                                 },
                                 {
@@ -6456,17 +5197,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
+                                    "id": "growth_data"
                                 }
-                            ]
+                            ],
+                            "source_code": "def get_user_count():\n    response = make_request('GET', '/user_count/')\n    if response is not None:\n        st.write('### User Count Overview')\n        st.write(f'**Total Users:** {response}')\n        growth_data = {'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'\n            ], 'User Count': [response - 5, response - 3, response, \n            response + 2, response + 5]}\n        st.line_chart(growth_data)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -6646,11 +5385,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_gender_distribution():\n    response = make_request('GET', '/gender_distribution/')\n    if response:\n        labels = list(response.keys())\n        sizes = list(response.values())\n        colors = ['#ff9999', '#66b3ff', '#99ff99']\n        st.write('Gender Distribution:')\n        st.pyplot(plt.figure(figsize=(6, 6)))\n        plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%',\n            startangle=90)\n        plt.axis('equal')\n        st.pyplot()\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.plot_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -6796,24 +5537,26 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_gender_distribution():\n    distribution = make_request('GET', '/gender_distribution/')\n    if distribution:\n        fig, ax = plt.subplots()\n        ax.bar(distribution.keys(), distribution.values(), color='skyblue')\n        ax.set_title('Gender Distribution')\n        ax.set_xlabel('Gender')\n        ax.set_ylabel('Count')\n        ax.set_facecolor('lightgrey')\n        st.pyplot(fig)\n"
                         }
                     ],
                     "methods": [
                         {
                             "type": "method",
                             "name": "get_user_count",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_user_count",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "response"
                                     ],
                                     "value": "make_request('GET', '/user_count/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
@@ -6829,14 +5572,24 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.metric",
+                                    "function": "st.write",
                                     "args": [
-                                        "'Total Users'",
-                                        "count"
+                                        "'### User Count Overview'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'**Total Users:** {response}'"
                                     ]
                                 },
                                 {
@@ -6845,13 +5598,44 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "growth_data"
+                                    ],
+                                    "value": "{'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'], 'User Count': [response - 5, response - 3, response, response + 2, response + 5]}"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "growth_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.bar_chart",
+                                    "function": "st.line_chart",
                                     "args": [
-                                        "{'Users': count}"
+                                        "growth_data"
                                     ]
                                 },
                                 {
@@ -6860,17 +5644,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
+                                    "id": "growth_data"
                                 }
-                            ]
+                            ],
+                            "source_code": "def get_user_count():\n    response = make_request('GET', '/user_count/')\n    if response is not None:\n        st.write('### User Count Overview')\n        st.write(f'**Total Users:** {response}')\n        growth_data = {'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'\n            ], 'User Count': [response - 5, response - 3, response, \n            response + 2, response + 5]}\n        st.line_chart(growth_data)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -7050,11 +5832,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_gender_distribution():\n    response = make_request('GET', '/gender_distribution/')\n    if response:\n        labels = list(response.keys())\n        sizes = list(response.values())\n        colors = ['#ff9999', '#66b3ff', '#99ff99']\n        st.write('Gender Distribution:')\n        st.pyplot(plt.figure(figsize=(6, 6)))\n        plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%',\n            startangle=90)\n        plt.axis('equal')\n        st.pyplot()\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.plot_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -7200,28 +5984,32 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_gender_distribution():\n    distribution = make_request('GET', '/gender_distribution/')\n    if distribution:\n        fig, ax = plt.subplots()\n        ax.bar(distribution.keys(), distribution.values(), color='skyblue')\n        ax.set_title('Gender Distribution')\n        ax.set_xlabel('Gender')\n        ax.set_ylabel('Count')\n        ax.set_facecolor('lightgrey')\n        st.pyplot(fig)\n"
                         }
-                    ]
+                    ],
+                    "source_code": "class UserAnalytics:\n\n    def get_user_count():\n        response = make_request('GET', '/user_count/')\n        if response is not None:\n            st.write('### User Count Overview')\n            st.write(f'**Total Users:** {response}')\n            growth_data = {'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4',\n                'Day 5'], 'User Count': [response - 5, response - 3,\n                response, response + 2, response + 5]}\n            st.line_chart(growth_data)\n\n    @staticmethod\n    def get_gender_distribution():\n        response = make_request('GET', '/gender_distribution/')\n        if response:\n            labels = list(response.keys())\n            sizes = list(response.values())\n            colors = ['#ff9999', '#66b3ff', '#99ff99']\n            st.write('Gender Distribution:')\n            st.pyplot(plt.figure(figsize=(6, 6)))\n            plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%',\n                startangle=90)\n            plt.axis('equal')\n            st.pyplot()\n\n    @staticmethod\n    def plot_gender_distribution():\n        distribution = make_request('GET', '/gender_distribution/')\n        if distribution:\n            fig, ax = plt.subplots()\n            ax.bar(distribution.keys(), distribution.values(), color='skyblue')\n            ax.set_title('Gender Distribution')\n            ax.set_xlabel('Gender')\n            ax.set_ylabel('Count')\n            ax.set_facecolor('lightgrey')\n            st.pyplot(fig)\n"
                 },
                 {
                     "type": "class",
                     "name": "UserAnalytics",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics",
                     "children": [
                         {
                             "type": "method",
                             "name": "get_user_count",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_user_count",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "response"
                                     ],
                                     "value": "make_request('GET', '/user_count/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
@@ -7237,14 +6025,24 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.metric",
+                                    "function": "st.write",
                                     "args": [
-                                        "'Total Users'",
-                                        "count"
+                                        "'### User Count Overview'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'**Total Users:** {response}'"
                                     ]
                                 },
                                 {
@@ -7253,13 +6051,44 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "growth_data"
+                                    ],
+                                    "value": "{'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'], 'User Count': [response - 5, response - 3, response, response + 2, response + 5]}"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "growth_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.bar_chart",
+                                    "function": "st.line_chart",
                                     "args": [
-                                        "{'Users': count}"
+                                        "growth_data"
                                     ]
                                 },
                                 {
@@ -7268,17 +6097,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
+                                    "id": "growth_data"
                                 }
-                            ]
+                            ],
+                            "source_code": "def get_user_count():\n    response = make_request('GET', '/user_count/')\n    if response is not None:\n        st.write('### User Count Overview')\n        st.write(f'**Total Users:** {response}')\n        growth_data = {'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'\n            ], 'User Count': [response - 5, response - 3, response, \n            response + 2, response + 5]}\n        st.line_chart(growth_data)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -7458,11 +6285,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_gender_distribution():\n    response = make_request('GET', '/gender_distribution/')\n    if response:\n        labels = list(response.keys())\n        sizes = list(response.values())\n        colors = ['#ff9999', '#66b3ff', '#99ff99']\n        st.write('Gender Distribution:')\n        st.pyplot(plt.figure(figsize=(6, 6)))\n        plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%',\n            startangle=90)\n        plt.axis('equal')\n        st.pyplot()\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.plot_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -7608,24 +6437,26 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_gender_distribution():\n    distribution = make_request('GET', '/gender_distribution/')\n    if distribution:\n        fig, ax = plt.subplots()\n        ax.bar(distribution.keys(), distribution.values(), color='skyblue')\n        ax.set_title('Gender Distribution')\n        ax.set_xlabel('Gender')\n        ax.set_ylabel('Count')\n        ax.set_facecolor('lightgrey')\n        st.pyplot(fig)\n"
                         }
                     ],
                     "methods": [
                         {
                             "type": "method",
                             "name": "get_user_count",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_user_count",
                             "children": [
                                 {
                                     "type": "assignment",
                                     "targets": [
-                                        "count"
+                                        "response"
                                     ],
                                     "value": "make_request('GET', '/user_count/')"
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
@@ -7641,14 +6472,24 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.metric",
+                                    "function": "st.write",
                                     "args": [
-                                        "'Total Users'",
-                                        "count"
+                                        "'### User Count Overview'"
+                                    ]
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "st"
+                                },
+                                {
+                                    "type": "call",
+                                    "function": "st.write",
+                                    "args": [
+                                        "f'**Total Users:** {response}'"
                                     ]
                                 },
                                 {
@@ -7657,13 +6498,44 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "assignment",
+                                    "targets": [
+                                        "growth_data"
+                                    ],
+                                    "value": "{'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'], 'User Count': [response - 5, response - 3, response, response + 2, response + 5]}"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "growth_data"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
+                                },
+                                {
+                                    "type": "name",
+                                    "id": "response"
                                 },
                                 {
                                     "type": "call",
-                                    "function": "st.bar_chart",
+                                    "function": "st.line_chart",
                                     "args": [
-                                        "{'Users': count}"
+                                        "growth_data"
                                     ]
                                 },
                                 {
@@ -7672,17 +6544,15 @@
                                 },
                                 {
                                     "type": "name",
-                                    "id": "count"
-                                },
-                                {
-                                    "type": "name",
-                                    "id": "staticmethod"
+                                    "id": "growth_data"
                                 }
-                            ]
+                            ],
+                            "source_code": "def get_user_count():\n    response = make_request('GET', '/user_count/')\n    if response is not None:\n        st.write('### User Count Overview')\n        st.write(f'**Total Users:** {response}')\n        growth_data = {'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'\n            ], 'User Count': [response - 5, response - 3, response, \n            response + 2, response + 5]}\n        st.line_chart(growth_data)\n"
                         },
                         {
                             "type": "method",
                             "name": "get_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.get_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -7862,11 +6732,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_gender_distribution():\n    response = make_request('GET', '/gender_distribution/')\n    if response:\n        labels = list(response.keys())\n        sizes = list(response.values())\n        colors = ['#ff9999', '#66b3ff', '#99ff99']\n        st.write('Gender Distribution:')\n        st.pyplot(plt.figure(figsize=(6, 6)))\n        plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%',\n            startangle=90)\n        plt.axis('equal')\n        st.pyplot()\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_gender_distribution",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.UserAnalytics.plot_gender_distribution",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -8012,17 +6884,21 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_gender_distribution():\n    distribution = make_request('GET', '/gender_distribution/')\n    if distribution:\n        fig, ax = plt.subplots()\n        ax.bar(distribution.keys(), distribution.values(), color='skyblue')\n        ax.set_title('Gender Distribution')\n        ax.set_xlabel('Gender')\n        ax.set_ylabel('Count')\n        ax.set_facecolor('lightgrey')\n        st.pyplot(fig)\n"
                         }
-                    ]
+                    ],
+                    "source_code": "class UserAnalytics:\n\n    def get_user_count():\n        response = make_request('GET', '/user_count/')\n        if response is not None:\n            st.write('### User Count Overview')\n            st.write(f'**Total Users:** {response}')\n            growth_data = {'Days': ['Day 1', 'Day 2', 'Day 3', 'Day 4',\n                'Day 5'], 'User Count': [response - 5, response - 3,\n                response, response + 2, response + 5]}\n            st.line_chart(growth_data)\n\n    @staticmethod\n    def get_gender_distribution():\n        response = make_request('GET', '/gender_distribution/')\n        if response:\n            labels = list(response.keys())\n            sizes = list(response.values())\n            colors = ['#ff9999', '#66b3ff', '#99ff99']\n            st.write('Gender Distribution:')\n            st.pyplot(plt.figure(figsize=(6, 6)))\n            plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%',\n                startangle=90)\n            plt.axis('equal')\n            st.pyplot()\n\n    @staticmethod\n    def plot_gender_distribution():\n        distribution = make_request('GET', '/gender_distribution/')\n        if distribution:\n            fig, ax = plt.subplots()\n            ax.bar(distribution.keys(), distribution.values(), color='skyblue')\n            ax.set_title('Gender Distribution')\n            ax.set_xlabel('Gender')\n            ax.set_ylabel('Count')\n            ax.set_facecolor('lightgrey')\n            st.pyplot(fig)\n"
                 },
                 {
                     "type": "class",
                     "name": "LocationAnalytics",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics",
                     "children": [
                         {
                             "type": "method",
                             "name": "get_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.get_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -8102,11 +6978,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        st.write('User Density by Region:')\n        for region, count in density.items():\n            st.write(f'{region}: {count}')\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.plot_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -8261,11 +7139,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        fig, ax = plt.subplots(figsize=(10, 6))\n        ax.bar(density.keys(), density.values(), color='skyblue')\n        ax.set_title('User Density by Region')\n        ax.set_xlabel('Region')\n        ax.set_ylabel('Number of Users')\n        plt.xticks(rotation=45)\n        plt.grid(True, which='both', linestyle='--', linewidth=0.5)\n        st.pyplot(fig)\n"
                         },
                         {
                             "type": "method",
                             "name": "display_user_map",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.display_user_map",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -8518,13 +7398,15 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef display_user_map():\n    users = make_request('GET', '/all_users/')\n    if users:\n        map_data = [{'name': f\"{user['first_name']} {user['last_name']}\",\n            'location': [user['latitude'], user['longitude']], 'email':\n            user['email']} for user in users]\n        avg_lat = sum(user['latitude'] for user in users) / len(users)\n        avg_lon = sum(user['longitude'] for user in users) / len(users)\n        m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)\n        for data in map_data:\n            folium.Marker(location=data['location'], popup=data['name'],\n                tooltip=data['email']).add_to(m)\n        folium_static(m)\n"
                         }
                     ],
                     "methods": [
                         {
                             "type": "method",
                             "name": "get_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.get_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -8604,11 +7486,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        st.write('User Density by Region:')\n        for region, count in density.items():\n            st.write(f'{region}: {count}')\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.plot_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -8763,11 +7647,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        fig, ax = plt.subplots(figsize=(10, 6))\n        ax.bar(density.keys(), density.values(), color='skyblue')\n        ax.set_title('User Density by Region')\n        ax.set_xlabel('Region')\n        ax.set_ylabel('Number of Users')\n        plt.xticks(rotation=45)\n        plt.grid(True, which='both', linestyle='--', linewidth=0.5)\n        st.pyplot(fig)\n"
                         },
                         {
                             "type": "method",
                             "name": "display_user_map",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.display_user_map",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -9020,17 +7906,21 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef display_user_map():\n    users = make_request('GET', '/all_users/')\n    if users:\n        map_data = [{'name': f\"{user['first_name']} {user['last_name']}\",\n            'location': [user['latitude'], user['longitude']], 'email':\n            user['email']} for user in users]\n        avg_lat = sum(user['latitude'] for user in users) / len(users)\n        avg_lon = sum(user['longitude'] for user in users) / len(users)\n        m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)\n        for data in map_data:\n            folium.Marker(location=data['location'], popup=data['name'],\n                tooltip=data['email']).add_to(m)\n        folium_static(m)\n"
                         }
-                    ]
+                    ],
+                    "source_code": "class LocationAnalytics:\n\n    @staticmethod\n    def get_user_density():\n        density = make_request('GET', '/user_density/')\n        if density:\n            st.write('User Density by Region:')\n            for region, count in density.items():\n                st.write(f'{region}: {count}')\n\n    @staticmethod\n    def plot_user_density():\n        density = make_request('GET', '/user_density/')\n        if density:\n            fig, ax = plt.subplots(figsize=(10, 6))\n            ax.bar(density.keys(), density.values(), color='skyblue')\n            ax.set_title('User Density by Region')\n            ax.set_xlabel('Region')\n            ax.set_ylabel('Number of Users')\n            plt.xticks(rotation=45)\n            plt.grid(True, which='both', linestyle='--', linewidth=0.5)\n            st.pyplot(fig)\n\n    @staticmethod\n    def display_user_map():\n        users = make_request('GET', '/all_users/')\n        if users:\n            map_data = [{'name':\n                f\"{user['first_name']} {user['last_name']}\", 'location': [\n                user['latitude'], user['longitude']], 'email': user['email'\n                ]} for user in users]\n            avg_lat = sum(user['latitude'] for user in users) / len(users)\n            avg_lon = sum(user['longitude'] for user in users) / len(users)\n            m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)\n            for data in map_data:\n                folium.Marker(location=data['location'], popup=data['name'],\n                    tooltip=data['email']).add_to(m)\n            folium_static(m)\n"
                 },
                 {
                     "type": "class",
                     "name": "LocationAnalytics",
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics",
                     "children": [
                         {
                             "type": "method",
                             "name": "get_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.get_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -9110,11 +8000,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        st.write('User Density by Region:')\n        for region, count in density.items():\n            st.write(f'{region}: {count}')\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.plot_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -9269,11 +8161,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        fig, ax = plt.subplots(figsize=(10, 6))\n        ax.bar(density.keys(), density.values(), color='skyblue')\n        ax.set_title('User Density by Region')\n        ax.set_xlabel('Region')\n        ax.set_ylabel('Number of Users')\n        plt.xticks(rotation=45)\n        plt.grid(True, which='both', linestyle='--', linewidth=0.5)\n        st.pyplot(fig)\n"
                         },
                         {
                             "type": "method",
                             "name": "display_user_map",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.display_user_map",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -9526,13 +8420,15 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef display_user_map():\n    users = make_request('GET', '/all_users/')\n    if users:\n        map_data = [{'name': f\"{user['first_name']} {user['last_name']}\",\n            'location': [user['latitude'], user['longitude']], 'email':\n            user['email']} for user in users]\n        avg_lat = sum(user['latitude'] for user in users) / len(users)\n        avg_lon = sum(user['longitude'] for user in users) / len(users)\n        m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)\n        for data in map_data:\n            folium.Marker(location=data['location'], popup=data['name'],\n                tooltip=data['email']).add_to(m)\n        folium_static(m)\n"
                         }
                     ],
                     "methods": [
                         {
                             "type": "method",
                             "name": "get_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.get_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -9612,11 +8508,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef get_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        st.write('User Density by Region:')\n        for region, count in density.items():\n            st.write(f'{region}: {count}')\n"
                         },
                         {
                             "type": "method",
                             "name": "plot_user_density",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.plot_user_density",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -9771,11 +8669,13 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef plot_user_density():\n    density = make_request('GET', '/user_density/')\n    if density:\n        fig, ax = plt.subplots(figsize=(10, 6))\n        ax.bar(density.keys(), density.values(), color='skyblue')\n        ax.set_title('User Density by Region')\n        ax.set_xlabel('Region')\n        ax.set_ylabel('Number of Users')\n        plt.xticks(rotation=45)\n        plt.grid(True, which='both', linestyle='--', linewidth=0.5)\n        st.pyplot(fig)\n"
                         },
                         {
                             "type": "method",
                             "name": "display_user_map",
+                            "full_path": "/home/hansal/DatingApp/frontend/app.py.LocationAnalytics.display_user_map",
                             "children": [
                                 {
                                     "type": "assignment",
@@ -10028,19 +8928,25 @@
                                     "type": "name",
                                     "id": "staticmethod"
                                 }
-                            ]
+                            ],
+                            "source_code": "@staticmethod\ndef display_user_map():\n    users = make_request('GET', '/all_users/')\n    if users:\n        map_data = [{'name': f\"{user['first_name']} {user['last_name']}\",\n            'location': [user['latitude'], user['longitude']], 'email':\n            user['email']} for user in users]\n        avg_lat = sum(user['latitude'] for user in users) / len(users)\n        avg_lon = sum(user['longitude'] for user in users) / len(users)\n        m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)\n        for data in map_data:\n            folium.Marker(location=data['location'], popup=data['name'],\n                tooltip=data['email']).add_to(m)\n        folium_static(m)\n"
                         }
-                    ]
+                    ],
+                    "source_code": "class LocationAnalytics:\n\n    @staticmethod\n    def get_user_density():\n        density = make_request('GET', '/user_density/')\n        if density:\n            st.write('User Density by Region:')\n            for region, count in density.items():\n                st.write(f'{region}: {count}')\n\n    @staticmethod\n    def plot_user_density():\n        density = make_request('GET', '/user_density/')\n        if density:\n            fig, ax = plt.subplots(figsize=(10, 6))\n            ax.bar(density.keys(), density.values(), color='skyblue')\n            ax.set_title('User Density by Region')\n            ax.set_xlabel('Region')\n            ax.set_ylabel('Number of Users')\n            plt.xticks(rotation=45)\n            plt.grid(True, which='both', linestyle='--', linewidth=0.5)\n            st.pyplot(fig)\n\n    @staticmethod\n    def display_user_map():\n        users = make_request('GET', '/all_users/')\n        if users:\n            map_data = [{'name':\n                f\"{user['first_name']} {user['last_name']}\", 'location': [\n                user['latitude'], user['longitude']], 'email': user['email'\n                ]} for user in users]\n            avg_lat = sum(user['latitude'] for user in users) / len(users)\n            avg_lon = sum(user['longitude'] for user in users) / len(users)\n            m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)\n            for data in map_data:\n                folium.Marker(location=data['location'], popup=data['name'],\n                    tooltip=data['email']).add_to(m)\n            folium_static(m)\n"
                 },
                 {
                     "type": "function",
                     "name": "dummy_function",
-                    "children": []
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.dummy_function",
+                    "children": [],
+                    "source_code": "def dummy_function():\n    pass\n"
                 },
                 {
                     "type": "function",
                     "name": "dummy_function",
-                    "children": []
+                    "full_path": "/home/hansal/DatingApp/frontend/app.py.dummy_function",
+                    "children": [],
+                    "source_code": "def dummy_function():\n    pass\n"
                 }
             ]
         }

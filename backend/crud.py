@@ -68,3 +68,15 @@ def get_nearest_users(db: Session, email: str, x: int):
     
     distances.sort(key=lambda x: x[1])
     return [u[0] for u in distances[:x]]
+
+def get_user_by_email(db: Session, email: str):
+    return db.query(models.User).filter(models.User.email == email).first()
+
+def update_user_location(db: Session, email: str, latitude: float, longitude: float):
+    user = get_user_by_email(db, email)
+    if user:
+        user.latitude = latitude
+        user.longitude = longitude
+        db.commit()
+        return user
+    return None
