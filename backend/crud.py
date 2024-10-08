@@ -80,3 +80,15 @@ def update_user_location(db: Session, email: str, latitude: float, longitude: fl
         db.commit()
         return user
     return None
+
+def get_user_by_uid(db: Session, uid: str):
+    return db.query(models.User).filter(models.User.uid == uid).first()
+
+def delete_user(db: Session, uid: str):
+    user = get_user_by_uid(db, uid)
+    if user:
+        db.delete(user)
+        db.commit()
+        return True
+    return False
+

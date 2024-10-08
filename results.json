@@ -6,13 +6,6 @@
             "children": []
         }
     ],
-    "/home/hansal/DatingApp/backend/__init__.py": [
-        {
-            "type": "module",
-            "name": "/home/hansal/DatingApp/backend/__init__.py",
-            "children": []
-        }
-    ],
     "/home/hansal/DatingApp/conftest.py": [
         {
             "type": "module",
@@ -131,13 +124,6 @@
                     "id": "sys"
                 }
             ]
-        }
-    ],
-    "/home/hansal/DatingApp/frontend/__init__.py": [
-        {
-            "type": "module",
-            "name": "/home/hansal/DatingApp/frontend/__init__.py",
-            "children": []
         }
     ],
     "/home/hansal/DatingApp/backend/schemas.py": [
@@ -635,6 +621,20 @@
                     "id": "declarative_base"
                 }
             ]
+        }
+    ],
+    "/home/hansal/DatingApp/frontend/__init__.py": [
+        {
+            "type": "module",
+            "name": "/home/hansal/DatingApp/frontend/__init__.py",
+            "children": []
+        }
+    ],
+    "/home/hansal/DatingApp/backend/__init__.py": [
+        {
+            "type": "module",
+            "name": "/home/hansal/DatingApp/backend/__init__.py",
+            "children": []
         }
     ],
     "/home/hansal/DatingApp/backend/models.py": [
@@ -2085,6 +2085,1710 @@
                 {
                     "type": "name",
                     "id": "int"
+                }
+            ]
+        }
+    ],
+    "/home/hansal/DatingApp/backend/crud.py": [
+        {
+            "type": "module",
+            "name": "/home/hansal/DatingApp/backend/crud.py",
+            "children": [
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.orm",
+                    "names": [
+                        {
+                            "module": "Session",
+                            "alias": "Session"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "sqlalchemy.sql.expression",
+                    "names": [
+                        {
+                            "module": "func",
+                            "alias": "func"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "backend",
+                    "names": [
+                        {
+                            "module": "models",
+                            "alias": "models"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "requests",
+                            "alias": "requests"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "names": [
+                        {
+                            "module": "uuid",
+                            "alias": "uuid"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "geopy.distance",
+                    "names": [
+                        {
+                            "module": "geodesic",
+                            "alias": "geodesic"
+                        }
+                    ]
+                },
+                {
+                    "type": "import",
+                    "module": "datetime",
+                    "names": [
+                        {
+                            "module": "datetime",
+                            "alias": "datetime"
+                        }
+                    ]
+                },
+                {
+                    "type": "function",
+                    "name": "fetch_and_store_users",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.fetch_and_store_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "str(uuid.uuid4())"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "str",
+                            "args": [
+                                "uuid.uuid4()"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "call",
+                            "function": "uuid.uuid4",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "uuid"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_datetime"
+                            ],
+                            "value": "datetime.utcnow()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "datetime.utcnow",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "users_to_add"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "call",
+                            "function": "range",
+                            "args": [
+                                "num_users"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "range"
+                        },
+                        {
+                            "type": "name",
+                            "id": "num_users"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "response"
+                            ],
+                            "value": "requests.get('https://randomuser.me/api/')"
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "call",
+                            "function": "requests.get",
+                            "args": [
+                                "'https://randomuser.me/api/'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.raise_for_status",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "data"
+                            ],
+                            "value": "response.json()['results'][0]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.json",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "print",
+                            "args": [
+                                "f'An error occurred while fetching user data: {e}'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "print"
+                        },
+                        {
+                            "type": "name",
+                            "id": "e"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "models.User",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['latitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['longitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "users_to_add.append",
+                            "args": [
+                                "user"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.add_all",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.commit",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "total_users"
+                            ],
+                            "value": "db.query(models.User).count()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).count",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "len",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "len"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        }
+                    ],
+                    "source_code": "def fetch_and_store_users(db: Session, num_users: int):\n    run_id = str(uuid.uuid4())\n    run_datetime = datetime.utcnow()\n    users_to_add = []\n    for i in range(num_users):\n        try:\n            response = requests.get('https://randomuser.me/api/')\n            response.raise_for_status()\n            data = response.json()['results'][0]\n        except requests.RequestException as e:\n            print(f'An error occurred while fetching user data: {e}')\n            continue\n        user = models.User(uid=data['login']['uuid'], email=data['email'],\n            first_name=data['name']['first'], last_name=data['name']['last'\n            ], gender=data['gender'], latitude=float(data['location'][\n            'coordinates']['latitude']), longitude=float(data['location'][\n            'coordinates']['longitude']), run_id=run_id, run_iteration=i + \n            1, datetime=run_datetime)\n        users_to_add.append(user)\n    db.add_all(users_to_add)\n    db.commit()\n    total_users = db.query(models.User).count()\n    return {'message':\n        f'Added {len(users_to_add)} new users. Total users: {total_users}',\n        'run_id': run_id}\n"
+                },
+                {
+                    "type": "function",
+                    "name": "fetch_and_store_users",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.fetch_and_store_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_id"
+                            ],
+                            "value": "str(uuid.uuid4())"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "call",
+                            "function": "str",
+                            "args": [
+                                "uuid.uuid4()"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "call",
+                            "function": "uuid.uuid4",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "uuid"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "run_datetime"
+                            ],
+                            "value": "datetime.utcnow()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "datetime.utcnow",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "datetime"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "users_to_add"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "call",
+                            "function": "range",
+                            "args": [
+                                "num_users"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "range"
+                        },
+                        {
+                            "type": "name",
+                            "id": "num_users"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "response"
+                            ],
+                            "value": "requests.get('https://randomuser.me/api/')"
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "call",
+                            "function": "requests.get",
+                            "args": [
+                                "'https://randomuser.me/api/'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.raise_for_status",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "data"
+                            ],
+                            "value": "response.json()['results'][0]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "response.json",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "response"
+                        },
+                        {
+                            "type": "name",
+                            "id": "requests"
+                        },
+                        {
+                            "type": "call",
+                            "function": "print",
+                            "args": [
+                                "f'An error occurred while fetching user data: {e}'"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "print"
+                        },
+                        {
+                            "type": "name",
+                            "id": "e"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "models.User(uid=data['login']['uuid'], email=data['email'], first_name=data['name']['first'], last_name=data['name']['last'], gender=data['gender'], latitude=float(data['location']['coordinates']['latitude']), longitude=float(data['location']['coordinates']['longitude']), run_id=run_id, run_iteration=i + 1, datetime=run_datetime)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "models.User",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['latitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "call",
+                            "function": "float",
+                            "args": [
+                                "data['location']['coordinates']['longitude']"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "data"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        },
+                        {
+                            "type": "name",
+                            "id": "i"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_datetime"
+                        },
+                        {
+                            "type": "call",
+                            "function": "users_to_add.append",
+                            "args": [
+                                "user"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.add_all",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.commit",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "total_users"
+                            ],
+                            "value": "db.query(models.User).count()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).count",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "len",
+                            "args": [
+                                "users_to_add"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "len"
+                        },
+                        {
+                            "type": "name",
+                            "id": "users_to_add"
+                        },
+                        {
+                            "type": "name",
+                            "id": "total_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "run_id"
+                        }
+                    ],
+                    "source_code": "def fetch_and_store_users(db: Session, num_users: int):\n    run_id = str(uuid.uuid4())\n    run_datetime = datetime.utcnow()\n    users_to_add = []\n    for i in range(num_users):\n        try:\n            response = requests.get('https://randomuser.me/api/')\n            response.raise_for_status()\n            data = response.json()['results'][0]\n        except requests.RequestException as e:\n            print(f'An error occurred while fetching user data: {e}')\n            continue\n        user = models.User(uid=data['login']['uuid'], email=data['email'],\n            first_name=data['name']['first'], last_name=data['name']['last'\n            ], gender=data['gender'], latitude=float(data['location'][\n            'coordinates']['latitude']), longitude=float(data['location'][\n            'coordinates']['longitude']), run_id=run_id, run_iteration=i + \n            1, datetime=run_datetime)\n        users_to_add.append(user)\n    db.add_all(users_to_add)\n    db.commit()\n    total_users = db.query(models.User).count()\n    return {'message':\n        f'Added {len(users_to_add)} new users. Total users: {total_users}',\n        'run_id': run_id}\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_user",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_random_user",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by(func.random()).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by",
+                            "args": [
+                                "func.random()"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "func.random",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "func"
+                        }
+                    ],
+                    "source_code": "def get_random_user(db: Session):\n    return db.query(models.User).order_by(func.random()).first()\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_user",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_random_user",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by(func.random()).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).order_by",
+                            "args": [
+                                "func.random()"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "call",
+                            "function": "func.random",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "func"
+                        }
+                    ],
+                    "source_code": "def get_random_user(db: Session):\n    return db.query(models.User).order_by(func.random()).first()\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_username",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_random_username",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "random_user"
+                            ],
+                            "value": "get_random_user(db)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "get_random_user",
+                            "args": [
+                                "db"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "get_random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        }
+                    ],
+                    "source_code": "def get_random_username(db: Session):\n    random_user = get_random_user(db)\n    if random_user:\n        return f'{random_user.first_name} {random_user.last_name}'\n    return None\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_random_username",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_random_username",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "random_user"
+                            ],
+                            "value": "get_random_user(db)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "get_random_user",
+                            "args": [
+                                "db"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "get_random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "random_user"
+                        }
+                    ],
+                    "source_code": "def get_random_username(db: Session):\n    random_user = get_random_user(db)\n    if random_user:\n        return f'{random_user.first_name} {random_user.last_name}'\n    return None\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_nearest_users",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_nearest_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "db.query(models.User).filter(models.User.email == email).first()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter(models.User.email == email).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter",
+                            "args": [
+                                "models.User.email == email"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "all_users"
+                            ],
+                            "value": "db.query(models.User).all()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).all",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distances"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distance"
+                            ],
+                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "geodesic",
+                            "args": [
+                                "(user.latitude, user.longitude)",
+                                "(other_user.latitude, other_user.longitude)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "geodesic"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.append",
+                            "args": [
+                                "(other_user, distance)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.sort",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "lambda",
+                            "children": [
+                                {
+                                    "type": "name",
+                                    "id": "x"
+                                }
+                            ],
+                            "source_code": "lambda x: x[1]\n"
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "x"
+                        }
+                    ],
+                    "source_code": "def get_nearest_users(db: Session, email: str, x: int):\n    user = db.query(models.User).filter(models.User.email == email).first()\n    if not user:\n        return []\n    all_users = db.query(models.User).all()\n    distances = []\n    for other_user in all_users:\n        if other_user.email != user.email:\n            distance = geodesic((user.latitude, user.longitude), (\n                other_user.latitude, other_user.longitude)).miles\n            distances.append((other_user, distance))\n    distances.sort(key=lambda x: x[1])\n    return [u[0] for u in distances[:x]]\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_nearest_users",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_nearest_users",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "int"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "db.query(models.User).filter(models.User.email == email).first()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter(models.User.email == email).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter",
+                            "args": [
+                                "models.User.email == email"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "all_users"
+                            ],
+                            "value": "db.query(models.User).all()"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).all",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distances"
+                            ],
+                            "value": "[]"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "all_users"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "distance"
+                            ],
+                            "value": "geodesic((user.latitude, user.longitude), (other_user.latitude, other_user.longitude)).miles"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "geodesic",
+                            "args": [
+                                "(user.latitude, user.longitude)",
+                                "(other_user.latitude, other_user.longitude)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "geodesic"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.append",
+                            "args": [
+                                "(other_user, distance)"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "other_user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distance"
+                        },
+                        {
+                            "type": "call",
+                            "function": "distances.sort",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "lambda",
+                            "children": [
+                                {
+                                    "type": "name",
+                                    "id": "x"
+                                }
+                            ],
+                            "source_code": "lambda x: x[1]\n"
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "u"
+                        },
+                        {
+                            "type": "name",
+                            "id": "distances"
+                        },
+                        {
+                            "type": "name",
+                            "id": "x"
+                        }
+                    ],
+                    "source_code": "def get_nearest_users(db: Session, email: str, x: int):\n    user = db.query(models.User).filter(models.User.email == email).first()\n    if not user:\n        return []\n    all_users = db.query(models.User).all()\n    distances = []\n    for other_user in all_users:\n        if other_user.email != user.email:\n            distance = geodesic((user.latitude, user.longitude), (\n                other_user.latitude, other_user.longitude)).miles\n            distances.append((other_user, distance))\n    distances.sort(key=lambda x: x[1])\n    return [u[0] for u in distances[:x]]\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_user_by_email",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_user_by_email",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter(models.User.email == email).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter",
+                            "args": [
+                                "models.User.email == email"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        }
+                    ],
+                    "source_code": "def get_user_by_email(db: Session, email: str):\n    return db.query(models.User).filter(models.User.email == email).first()\n"
+                },
+                {
+                    "type": "function",
+                    "name": "get_user_by_email",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.get_user_by_email",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter(models.User.email == email).first",
+                            "args": []
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query(models.User).filter",
+                            "args": [
+                                "models.User.email == email"
+                            ]
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.query",
+                            "args": [
+                                "models.User"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "models"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        }
+                    ],
+                    "source_code": "def get_user_by_email(db: Session, email: str):\n    return db.query(models.User).filter(models.User.email == email).first()\n"
+                },
+                {
+                    "type": "function",
+                    "name": "update_user_location",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.update_user_location",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "get_user_by_email(db, email)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "get_user_by_email",
+                            "args": [
+                                "db",
+                                "email"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "get_user_by_email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user.latitude"
+                            ],
+                            "value": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user.longitude"
+                            ],
+                            "value": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.commit",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        }
+                    ],
+                    "source_code": "def update_user_location(db: Session, email: str, latitude: float,\n    longitude: float):\n    user = get_user_by_email(db, email)\n    if user:\n        user.latitude = latitude\n        user.longitude = longitude\n        db.commit()\n        return user\n    return None\n"
+                },
+                {
+                    "type": "function",
+                    "name": "update_user_location",
+                    "full_path": "/home/hansal/DatingApp/backend/crud.py.update_user_location",
+                    "children": [
+                        {
+                            "type": "name",
+                            "id": "Session"
+                        },
+                        {
+                            "type": "name",
+                            "id": "str"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "name",
+                            "id": "float"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user"
+                            ],
+                            "value": "get_user_by_email(db, email)"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "call",
+                            "function": "get_user_by_email",
+                            "args": [
+                                "db",
+                                "email"
+                            ]
+                        },
+                        {
+                            "type": "name",
+                            "id": "get_user_by_email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "email"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user.latitude"
+                            ],
+                            "value": "latitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "latitude"
+                        },
+                        {
+                            "type": "assignment",
+                            "targets": [
+                                "user.longitude"
+                            ],
+                            "value": "longitude"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        },
+                        {
+                            "type": "name",
+                            "id": "longitude"
+                        },
+                        {
+                            "type": "call",
+                            "function": "db.commit",
+                            "args": []
+                        },
+                        {
+                            "type": "name",
+                            "id": "db"
+                        },
+                        {
+                            "type": "name",
+                            "id": "user"
+                        }
+                    ],
+                    "source_code": "def update_user_location(db: Session, email: str, latitude: float,\n    longitude: float):\n    user = get_user_by_email(db, email)\n    if user:\n        user.latitude = latitude\n        user.longitude = longitude\n        db.commit()\n        return user\n    return None\n"
                 }
             ]
         }
