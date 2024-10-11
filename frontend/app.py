@@ -83,12 +83,7 @@ with col2:
 st.sidebar.info("This application interacts with a FastAPI backend to manage random user data.")
 
 class UserManager:
-    @staticmethod
-    def fetch_and_store_users(num_users):
-        result = make_request("POST", "/users/", json={"num_users": num_users})
-        if result:
-            st.success(result["message"])
-            st.info(f"Run ID: {result['run_id']}")
+    
 
     @staticmethod
     def get_random_user():
@@ -133,96 +128,6 @@ class UserManager:
                 folium_static(m)
 
 
-class UserAnalytics:
-    def get_user_count():
-        # Fetch user count data
-        response = make_request("GET", "/user_count/")
-        if response is not None:
-            # Display user count with additional insights
-            st.write("### User Count Overview")
-            st.write(f"**Total Users:** {response}")
-
-            # Create a simple line chart to show user growth over time (mock data for illustration)
-            growth_data = {"Days": ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
-                           "User Count": [response - 5, response - 3, response, response + 2, response + 5]}
-            st.line_chart(growth_data)
-
-    @staticmethod
-    def get_gender_distribution():
-        # Fetch gender distribution data
-        response = make_request("GET", "/gender_distribution/")
-        if response:
-            # Create a pie chart for gender distribution
-            labels = list(response.keys())
-            sizes = list(response.values())
-            colors = ['#ff9999','#66b3ff','#99ff99']  # Example colors for the pie chart
-            
-            # Display the pie chart using Streamlit
-            st.write("Gender Distribution:")
-            st.pyplot(plt.figure(figsize=(6, 6)))
-            plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=90)
-            plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-            st.pyplot()
-                
-    @staticmethod
-    def plot_gender_distribution():
-        distribution = make_request("GET", "/gender_distribution/")
-        if distribution:
-            fig, ax = plt.subplots()
-            ax.bar(distribution.keys(), distribution.values(), color='skyblue')
-            ax.set_title("Gender Distribution")
-            ax.set_xlabel("Gender")
-            ax.set_ylabel("Count")
-            ax.set_facecolor('lightgrey')
-            st.pyplot(fig)
-
-class LocationAnalytics:
-    @staticmethod
-    def get_user_density():
-        density = make_request("GET", "/user_density/")
-        if density:
-            st.write("User Density by Region:")
-            for region, count in density.items():
-                st.write(f"{region}: {count}")
-
-    @staticmethod
-    def plot_user_density():
-        density = make_request("GET", "/user_density/")
-        if density:
-            fig, ax = plt.subplots(figsize=(10, 6))
-            ax.bar(density.keys(), density.values(), color='skyblue')
-            ax.set_title("User Density by Region")
-            ax.set_xlabel("Region")
-            ax.set_ylabel("Number of Users")
-            plt.xticks(rotation=45)
-            plt.grid(True, which='both', linestyle='--', linewidth=0.5)
-            st.pyplot(fig)
-
-    @staticmethod
-    def display_user_map():
-        users = make_request("GET", "/all_users/")
-        if users:
-            # Using a different mapping library or approach
-            map_data = [{"name": f"{user['first_name']} {user['last_name']}", 
-                          "location": [user['latitude'], user['longitude']], 
-                          "email": user['email']} for user in users]
-            
-            # Create a map centered on the average location of users
-            avg_lat = sum(user['latitude'] for user in users) / len(users)
-            avg_lon = sum(user['longitude'] for user in users) / len(users)
-            m = folium.Map(location=[avg_lat, avg_lon], zoom_start=4)
-
-            for data in map_data:
-                folium.Marker(
-                    location=data['location'],
-                    popup=data['name'],
-                    tooltip=data['email']
-                ).add_to(m)
-            folium_static(m)
-            
-            
-def dummy_function():
-    pass
 
 
 
