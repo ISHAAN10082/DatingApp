@@ -86,23 +86,6 @@ class UserManager:
     
 
     @staticmethod
-    def get_random_user():
-        user = make_request("GET", "/random_user/")
-        if user:
-            st.write(f"Name: {user['first_name']} {user['last_name']}")
-            st.write(f"Email: {user['email']}")
-            st.write(f"Gender: {user['gender']}")
-            st.write(f"UID: {user['uid']}")
-            st.write(f"Ingestion Date: {user['datetime']}")
-            m = folium.Map(location=[user['latitude'], user['longitude']], zoom_start=10)
-            folium.Marker(
-                [user['latitude'], user['longitude']],
-                popup=f"{user['first_name']} {user['last_name']}",
-                tooltip=user['email']
-            ).add_to(m)
-            folium_static(m)
-
-    @staticmethod
     def get_random_username():
         username = make_request("GET", "/random_username/")
         if username:
